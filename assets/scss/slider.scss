@@ -1,0 +1,93 @@
+.noUi-horizontal {
+  height: 1rem;
+  padding-right: 17px;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+  right: -20px;
+  left: auto;
+}
+
+.noUi-target {
+  background-image: -webkit-gradient(linear,left top,right top,from(#4a9a1d),to(#FF394F));
+  background-image: -webkit-linear-gradient(left,#4a9a1d 0, #ff9912 50%, #FF394F 100%);
+  background-image: -moz-linear-gradient(left,#4a9a1d 0, #ff9912 50%, #FF394F 100%);
+  background-image: -o-linear-gradient(left,#4a9a1d 0, #ff9912 50%, #FF394F 100%);
+  background-image: linear-gradient(to right,#4a9a1d 0, #ff9912 50%,#FF394F 100%);
+  background-repeat: repeat-x;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: .25rem;
+}
+
+.noUi-av.noUi-target {
+  background-image: -webkit-gradient(linear,left top,right top,from(#e9ebee),to(#e9ebee));
+  background-image: -webkit-linear-gradient(left,#e9ebee 0,#e9ebee 100%);
+  background-image: -moz-linear-gradient(left,#e9ebee 0,#e9ebee 100%);
+  background-image: -o-linear-gradient(left,#e9ebee 0,#e9ebee 100%);
+  background-image: linear-gradient(to right,#e9ebee 0,#e9ebee 100%);
+}
+
+.noUi-av .noUi-connect {
+  background-image: -webkit-gradient(linear,right top,left top,from(#a9a9a9),to(#b1b1b1));
+  background-image: -webkit-linear-gradient(right,#a9a9a9 0,#b1b1b1 100%);
+  background-image: -moz-linear-gradient(right,#a9a9a9 0,#b1b1b1 100%);
+  background-image: -o-linear-gradient(right,#a9a9a9 0,#b1b1b1 100%);
+  background-image: linear-gradient(to left,#a9a9a9 0,#b1b1b1 100%);
+  background-repeat: repeat-x;
+}
+
+.noUi-connect {
+  background-image: -webkit-gradient(linear,right top,left top,from(#1EC481),to(#69DEB4));
+  background-image: -webkit-linear-gradient(right,#1EC481 0,#69DEB4 100%);
+  background-image: -moz-linear-gradient(right,#1EC481 0,#69DEB4 100%);
+  background-image: -o-linear-gradient(right,#1EC481 0,#69DEB4 100%);
+  background-image: linear-gradient(to left,#1EC481 0,#69DEB4 100%);
+  background-repeat: repeat-x;
+}
+
+.noUi-handle {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 50%;
+  background: #FFF;
+  border: 5px solid #343a40;
+}
+
+.noUi-horizontal .noUi-handle {
+  height: 25px;
+  top: -4px;
+  width: 25px;
+}
+
+.noUi-pips-horizontal {
+  left: 8px;
+  width: 98.6%;
+}
+
+.noUi-pips-horizontal,
+.noUi-value-sub {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.noUi-value-horizontal {
+  margin-top: 5px;
+}
+
+.noUi-connects {
+  border-radius: 3px;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+
+@media(max-width:767px) {
+  .noUi-value-large,
+  .noUi-value-sub {
+    display: none;
+  }
+}

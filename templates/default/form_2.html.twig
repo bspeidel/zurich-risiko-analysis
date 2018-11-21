@@ -1,0 +1,319 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header text-center">
+                <img src="{{ asset('build/images/zurich-logo.png') }}" alt="">
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="{{ path('form_1') }}">Unternehmensdaten</a>
+                </li>
+                <li class="active">
+                    <a href="{{ path('form_2') }}">Haftungsrisiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_3') }}">Gebäude-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_4') }}">Inhalt-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_5') }}">Elektronik/Maschinen-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_6') }}">Unterbrechung Ihres Betriebes</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_7') }}">Kosten bei Rechtsangelegenheiten</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_8') }}">Transporte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_9') }}">Kfz-Risiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_10') }}">Spezial-Risiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_11') }}">Mitarbeiter</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_12') }}">Belegschaft / Inhabers / GGf / etc.</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_13') }}">Offene Punkte und weiteres Vorgehen</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="{{ path('resume') }}" class="resume"><i class="fas fa-list-alt"></i> Zusammenfassung</a>
+                </li>
+                <li>
+                    <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-chart-pie"></i> Bedarfsanalyse</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li>
+                                <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-chart-pie"></i> Bedarfsanalyse</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h3>Absicherung Ihrer Haftungsrisiken</h3>
+                    </div>
+                    <div class="col text-right">
+                        <a href="{{ path('form_3') }}" class="btn btn-success">Speichern</a>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="place">Verischerungssumme Betriebshaftpflicht</label>
+                                        <div class="col-sm-3">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon2">€</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Reparieren bzw. warten Sie Kundeneigentum auf Ihrem Grundstück?</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline1">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline2">nein</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Haben Sie Arbeisgeräte / Werkzeuge gemietet, für die Sie die Gefahr tragen? (Mietsachschäden beweglich)</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline11" name="customRadioInline11" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline11">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline21" name="customRadioInline11" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline21">nein</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Werden Ihrer Arbeitsmaschinen / Stapler auch außerhalb Ihres Betriebsgrundstückes eingesetzt? (Sondergenehmigung / AKB_Deckung)</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline13" name="customRadioInline13" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline13">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline23" name="customRadioInline13" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline23">nein</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Können Schäden an anderen Gewerken durch Nachbesserungsarbeiten entsehen? (Nachbesserungsbegleitschäden)</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline14" name="customRadioInline14" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline14">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline24" name="customRadioInline14" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline24">nein</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Werden Ihre Produkte mit anderen Produkten vermischt, verbunden, weiterverarbeitet oder eingebaut?</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline14" name="customRadioInline14" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline1">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline24" name="customRadioInline14" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline2">nein</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Arbeiten Sie auch im außereuropäischen Ausland? Werden Ihre Produkte auch in die USA/CAN exportiert?</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline15" name="customRadioInline15" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline15">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline25" name="customRadioInline15" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline25">nein</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Sind umweltrelevante Anlagen bzw. Lagermengen > 15.000 Liter umweltgefährender Stoffe vorhanden?</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline16" name="customRadioInline16" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline16">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline26" name="customRadioInline16" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline26">nein</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body aligner">
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Besteht eine Absicherung Ihres Privatvermögens bei schuldhaften Pflichtverletzungen? (D&O-Entcheiderhafplicht)?</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline17" name="customRadioInline17" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadioInline1">ja</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline27" name="customRadioInline17" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadioInline27">nein</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <small id="passwordHelpBlock" class="form-text text-danger">
+                                                <strong>Wichtig:</strong> Geschäftsführer / Vorstände von Kapitalgesellschaften haften ggf. für Verletzungen der Sorgfalspflicht persönlich und unbegrenzt.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <label for="place">Notizen</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="3" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

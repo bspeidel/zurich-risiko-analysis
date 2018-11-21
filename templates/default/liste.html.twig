@@ -1,0 +1,168 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <!-- Sidebar Holder -->
+
+    <!-- Page Content Holder -->
+    <div id="content">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><i class="fas fa-users"></i> Kunden</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col">
+                <h2>Jahresgespräch</h2>
+            </div>
+            <div class="col text-right">
+                <button type="submit" class="btn btn-success"><i class="fas fa-plus"></i>  Jahresgespräch hinzufügen</button>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="company">Was ist die aktuelle Situation in Ihrem Unternehmen?</label>
+                            <textarea type="text-area" class="form-control" id="place" row="3" placeholder=""></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="user">Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</label>
+                            <textarea type="text-area" class="form-control" id="place" row="3" placeholder=""></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="place">Hat sich Ihre Tätigkeit seit unserem letzen Gespräch verändert? Wenn ja, was ist neu?</label>
+                            <textarea type="text-area" class="form-control" id="place" row="3" placeholder=""></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="place">Planen Sie eine Anpassung Ihrer Taätigkeit? Wenn ja, welche und wann?</label>
+                            <textarea type="text-area" class="form-control" id="place" row="3" placeholder=""></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="place">Wie ist Ihre aktuelle Inhaber-/Geschäftsführerstruktur? Sind ggf. Änderungen geplant?</label>
+                            <textarea type="text-area" class="form-control" id="place" row="3" placeholder=""></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="place">Welchen Umsatz (ohne MWSt.) haben Sie im abgelaufenen Geschäftjahr erzielt?</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2">€</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title"> Wie ist Ihre aktuelle Mitarbeiterstruktur?</div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputEmail4">Anzahl Gesamt</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">davon Teilzeit</label>
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Lohn und Gehaltssumme im abgelaufenen Geschäftsjahr</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputEmail4">kaufmännisch Anzahl</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">davon Teilzeit</label>
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Lohn und Gehaltssumme im abgelaufenen Geschäftsjahr</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputEmail4">Gewerblich Anzahl</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">davon Teilzeit</label>
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Lohn und Gehaltssumme im abgelaufenen Geschäftsjahr</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="card">
+                    <div class="card-body">
+                        <label for="place">Sinf ggf. Veränderungen der Mitarbeiterstruktur geplant?</label>
+                        <textarea type="text-area" class="form-control" id="place" row="3" placeholder=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

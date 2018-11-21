@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('build/css/login.css') }}"/>
+    {% endblock %}
+{% block body %}
+    <div class="login-dark">
+        <form method="post">
+            <div class="text-center">
+                <img src="{{ asset('build/images/zurich-logo.png') }}" alt="">
+            </div>
+            <h2 class="title">Jahresgespräch</h2>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><a class="btn btn-primary btn-block" type="submit" href="{{ path('selectuser') }}">anmelden</a></div><a href="{{ path('selectuser') }}" class="forgot">Passwort vergessen?</a></form>
+    </div>
+{% endblock %}

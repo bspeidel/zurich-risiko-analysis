@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="sidebar-header text-center">
+                <img class="fixed" src="{{ asset('build/images/zurich-logo.png') }}" alt="">
+            </div>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-justify"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user-edit"></i> Max Mustermann</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('login') }}"><i class="fas fa-sign-out-alt"></i> Abmelden</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2>Bedarfsanalyse</h2>
+            </div>
+            <div class="col text-right">
+                <a href="#" class="btn btn-primary"><i class="fas fa-envelope"></i> E-Mail senden</a>
+                <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> PDF erzeugen</a>
+                <button class="btn btn-default" onclick="history.go(-1)"><i class="fas fa-chevron-left"></i> Zurück</button>
+            </div>
+        </div>
+        <strong>Linde Material Handling GmbH</strong>
+        <address>
+            Heinrich Heine Platz 84<br>
+            99722 Nordhausen<br>
+        </address>
+        <div class="line"></div>
+        <h5>Unternehmensdaten</h5>
+        <hr>
+        <h5>Abischerung Ihrer Haftungsrisiken</h5>
+        <hr>
+        <h5>Abischerung Ihrer Gebäude-Werte</h5>
+        <hr>
+        <h5>Abischerung Ihrer Inhalt-Werte</h5>
+        <hr>
+        <h5>Abischerung Ihrer Elektronik/Maschinen-Werte</h5>
+        <hr>
+        <h5>Erweiterte Abischerung Ihrer Unternehmensdaten</h5>
+        <hr>
+        <h5>Abischerung bei einer Unterbrechung Ihres Betriebes</h5>
+        <hr>
+        <h5>Abischerung Ihrer Kosten bei Rechtsangelegenheiten</h5>
+        <hr>
+        <h5>Abischerung Ihrer Transporte</h5>
+        <hr>
+        <h5>Abischerung Ihrer Kfz-Risiken</h5>
+        <hr>
+        <h5>Abischerung Ihrer Spezial-Risiken</h5>
+        <hr>
+        <h5>Abischerung Ihrer Mitarbeiter</h5>
+        <hr>
+        <h5>Vorsorge und Abischerung Belegschaft / Inhabers / GGf / etc.</h5>
+        <hr>
+        <h5>Offene Punkte und weiteres Vorgehen</h5>
+        <hr>
+    </div>
+{% endblock %}
