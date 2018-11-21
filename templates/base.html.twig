@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Zurich Risiko-Analyse{% endblock %}</title>
+    <link rel="icon" href="{{ asset('build/images/favicon.ico') }}" />
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('build/css/index.css') }}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+
+{% block body %}{% endblock %}
+
+{% block footer %}
+    {{ include('footer.html.twig') }}
+{% endblock footer %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
+    <script src="{{ asset('build/main.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+            $('.searchbox-input').on('keyup',function () {
+                console.log(filter);
+                //$('.card').show();
+                var filter = $(this).val(); // get the value of the input, which we filter on
+                console.log(filter);
+                $('.container-fluid').find(".card:not(:contains(" + filter + "))").addClass('d-none');
+                if (!this.value) {
+                    $('.container-fluid').find(".card").removeClass('d-none');
+                }
+            });
+
+            var slider_1 = document.getElementById('slider_1');
+
+            noUiSlider.create(slider_1, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_2 = document.getElementById('slider_2');
+
+            noUiSlider.create(slider_2, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_3 = document.getElementById('slider_3');
+
+            noUiSlider.create(slider_3, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_4 = document.getElementById('slider_4');
+
+            noUiSlider.create(slider_4, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_5 = document.getElementById('slider_5');
+
+            noUiSlider.create(slider_5, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_6 = document.getElementById('slider_6');
+
+            noUiSlider.create(slider_6, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_7 = document.getElementById('slider_7');
+
+            noUiSlider.create(slider_7, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_8 = document.getElementById('slider_8');
+
+            noUiSlider.create(slider_8, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_9 = document.getElementById('slider_9');
+
+            noUiSlider.create(slider_9, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_10 = document.getElementById('slider_10');
+
+            noUiSlider.create(slider_10, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_11 = document.getElementById('slider_11');
+
+            noUiSlider.create(slider_11, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            var slider_12 = document.getElementById('slider_12');
+
+            noUiSlider.create(slider_12, {
+                start: 0,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+        });
+    </script>
+{% endblock %}
+</body>
+</html>
