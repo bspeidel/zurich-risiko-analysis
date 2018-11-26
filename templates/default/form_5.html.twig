@@ -50,7 +50,7 @@
             </ul>
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-chart-pie"></i> Bedarfsanalyse</a>
+                    <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-sliders-h"></i> Analyse</a>
                 </li>
             </ul>
         </nav>
@@ -66,31 +66,29 @@
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('selectuser') }}"><i class="fas fa-users"></i> Kunden</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('login') }}"><i class="fas fa-sign-out-alt"></i> Abmelden</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="nav navbar-nav navbar-expand ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('selectuser') }}"><i class="fas fa-users"></i> Kunden</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('login') }}"><i class="fas fa-sign-out-alt"></i> Abmelden</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-10">
                         <h3>Erweiterte Absicherung Ihrer Elektronik/Maschinen-Werte</h3>
                     </div>
-                    <div class="col text-right">
+                    <div class="col-2 float-sm-right text-right">
                         <a href="{{ path('form_6') }}" class="btn btn-success">Speichern</a>
                     </div>
                 </div>
                 <div class="line"></div>
                 <form>
                     <div class="form-row">
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     <label for="company">Was ist die aktuelle Situation in Ihrem Unternehmen?</label>
@@ -98,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     <label for="user">Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</label>
@@ -108,7 +106,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     <label for="place">Hat sich Ihre Tätigkeit seit unserem letzen Gespräch verändert? Wenn ja, was ist neu?</label>
@@ -116,7 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     <label for="place">Planen Sie eine Anpassung Ihrer Taätigkeit? Wenn ja, welche und wann?</label>
@@ -126,7 +124,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     <label for="place">Wie ist Ihre aktuelle Inhaber-/Geschäftsführerstruktur? Sind ggf. Änderungen geplant?</label>
@@ -134,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     <label for="place">Welchen Umsatz (ohne MWSt.) haben Sie im abgelaufenen Geschäftjahr erzielt?</label>

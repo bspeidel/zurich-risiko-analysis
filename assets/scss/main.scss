@@ -1,13 +1,13 @@
-@import "~bootstrap/scss/functions";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/functions";
 @import "variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/code";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/bootstrap";
-@import "~bs-stepper/dist/css/bs-stepper";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/mixins";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/reboot";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/type";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/images";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/code";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/grid";
+@import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/bootstrap";
+@import "../../../zurich-risk-analysis/node_modules/bs-stepper/dist/css/bs-stepper.css";
 
 .logo {
   background-image: url("../images/zurich-logo.png");
@@ -57,8 +57,12 @@ a, a:hover, a:focus {
 .card {
   background-color: #f2f0ee;
   border: none;
-  min-height: 134px;
   margin: 0 3px;
+}
+
+.card-header h5 {
+  margin-bottom: 0;
+  line-height: 38px;
 }
 
 .form-control {
@@ -86,6 +90,29 @@ a, a:hover, a:focus {
   top: 10px;
   color: #4f90c6;
   font-size: 1.2rem;
+}
+
+.gauge {
+  max-width: 300px;
+}
+
+.dot-red {
+  height: 25px;
+  width: 25px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: -6px;
+  margin-left: 20px;
+}
+
+.dot-green {
+  height: 25px;
+  width: 25px;
+  background-color: #1EC481;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: -6px
 }
 
 /* ---------------------------------------------------
@@ -269,14 +296,32 @@ a.analyse, a.analyse:hover {
   }
 }
 
-.card-columns {
+.card-columns.user {
+  @include media-breakpoint-only(sm) {
+    column-count: 1 !important;
+  }
   @include media-breakpoint-only(md) {
-    column-count: 2;
+    column-count: 2 !important;
   }
   @include media-breakpoint-only(lg) {
-    column-count: 3;
+    column-count: 2 !important;
   }
   @include media-breakpoint-only(xl) {
-    column-count: 4;
+    column-count: 4 !important;
+  }
+}
+
+.card-columns.analyse {
+  @include media-breakpoint-only(sm) {
+    column-count: 1 !important;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 1 !important;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 1 !important;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 2 !important;
   }
 }

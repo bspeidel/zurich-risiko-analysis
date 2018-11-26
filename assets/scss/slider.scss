@@ -1,6 +1,11 @@
 .noUi-horizontal {
   height: 1rem;
-  padding-right: 17px;
+  //padding-right: 17px;
+}
+
+.noUi-connects {
+  overflow: unset;
+  z-index: 0;
 }
 
 html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
@@ -9,11 +14,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 .noUi-target {
-  background-image: -webkit-gradient(linear,left top,right top,from(#4a9a1d),to(#FF394F));
-  background-image: -webkit-linear-gradient(left,#4a9a1d 0, #ff9912 50%, #FF394F 100%);
-  background-image: -moz-linear-gradient(left,#4a9a1d 0, #ff9912 50%, #FF394F 100%);
-  background-image: -o-linear-gradient(left,#4a9a1d 0, #ff9912 50%, #FF394F 100%);
-  background-image: linear-gradient(to right,#4a9a1d 0, #ff9912 50%,#FF394F 100%);
+  background-image: -webkit-gradient(linear,left top,right top,from(#FF394F),to(#FF8090));
+  background-image: -webkit-linear-gradient(left,#FF394F 0,#FF8090 100%);
+  background-image: -moz-linear-gradient(left,#FF394F 0,#FF8090 100%);
+  background-image: -o-linear-gradient(left,#FF394F 0,#FF8090 100%);
+  background-image: linear-gradient(to right,#FF394F 0,#FF8090 100%);
   background-repeat: repeat-x;
   border: 0;
   -webkit-box-shadow: none;
@@ -22,29 +27,52 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 .noUi-av.noUi-target {
-  background-image: -webkit-gradient(linear,left top,right top,from(#e9ebee),to(#e9ebee));
-  background-image: -webkit-linear-gradient(left,#e9ebee 0,#e9ebee 100%);
-  background-image: -moz-linear-gradient(left,#e9ebee 0,#e9ebee 100%);
-  background-image: -o-linear-gradient(left,#e9ebee 0,#e9ebee 100%);
-  background-image: linear-gradient(to right,#e9ebee 0,#e9ebee 100%);
+  background-image: -webkit-gradient(linear,left top,right top,from(#fff),to(#eae8e6));
+  background-image: -webkit-linear-gradient(left,#fff 0,#eae8e6 100%);
+  background-image: -moz-linear-gradient(left,#fff 0,#eae8e6 100%);
+  background-image: -o-linear-gradient(left,#fff 0,#eae8e6 100%);
+  background-image: linear-gradient(to right,#fff 0,#eae8e6 100%);
 }
 
 .noUi-av .noUi-connect {
-  background-image: -webkit-gradient(linear,right top,left top,from(#a9a9a9),to(#b1b1b1));
-  background-image: -webkit-linear-gradient(right,#a9a9a9 0,#b1b1b1 100%);
-  background-image: -moz-linear-gradient(right,#a9a9a9 0,#b1b1b1 100%);
-  background-image: -o-linear-gradient(right,#a9a9a9 0,#b1b1b1 100%);
-  background-image: linear-gradient(to left,#a9a9a9 0,#b1b1b1 100%);
+  background-image: -webkit-gradient(linear,right top,left top,from(#FF394F),to(#FF8090));
+  background-image: -webkit-linear-gradient(right,#FF394F 0,#FF8090 100%);
+  background-image: -moz-linear-gradient(right,#FF394F 0,#FF8090 100%);
+  background-image: -o-linear-gradient(right,#FF394F 0,#FF8090 100%);
+  background-image: linear-gradient(to left,#FF394F 0,#FF8090 100%);
   background-repeat: repeat-x;
 }
 
-.noUi-connect {
-  background-image: -webkit-gradient(linear,right top,left top,from(#1EC481),to(#69DEB4));
-  background-image: -webkit-linear-gradient(right,#1EC481 0,#69DEB4 100%);
-  background-image: -moz-linear-gradient(right,#1EC481 0,#69DEB4 100%);
-  background-image: -o-linear-gradient(right,#1EC481 0,#69DEB4 100%);
-  background-image: linear-gradient(to left,#1EC481 0,#69DEB4 100%);
-  background-repeat: repeat-x;
+.slider.noUi-target {
+  background-image: -webkit-gradient(linear,left top,right top,from(#fff),to(#eae8e6));
+  background-image: -webkit-linear-gradient(left,#fff 0,#eae8e6 100%);
+  background-image: -moz-linear-gradient(left,#fff 0,#eae8e6 100%);
+  background-image: -o-linear-gradient(left,#fff 0,#eae8e6 100%);
+  background-image: linear-gradient(to right,#fff 0,#eae8e6 100%);
+}
+
+//.noUi-connect {
+//  background-image: -webkit-gradient(linear,right top,left top,from(#1EC481),to(#69DEB4));
+//  background-image: -webkit-linear-gradient(right,#1EC481 0,#69DEB4 100%);
+//  background-image: -moz-linear-gradient(right,#1EC481 0,#69DEB4 100%);
+//  background-image: -o-linear-gradient(right,#1EC481 0,#69DEB4 100%);
+//  background-image: linear-gradient(to left,#1EC481 0,#69DEB4 100%);
+//  background-repeat: repeat-x;
+//}
+
+.slider {
+  .noUi-origin:nth-child(3) {
+    .noUi-handle {
+      display: none;
+    }
+  }
+}
+
+.c-1-color {
+  background: #1EC481;
+}
+.c-2-color {
+  background: #FF394F;
 }
 
 .noUi-handle {

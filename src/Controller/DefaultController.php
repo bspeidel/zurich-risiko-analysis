@@ -18,31 +18,11 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/liste", name="liste")
-     */
-    public function liste()
-    {
-        return $this->render('default/liste.html.twig', [
-            'controller_name' => 'DefaultController',
-        ]);
-    }
-
-    /**
      * @Route("/analyse", name="analyse")
      */
     public function analyse()
     {
         return $this->render('default/analyse.html.twig', [
-            'controller_name' => 'DefaultController',
-        ]);
-    }
-
-    /**
-     * @Route("/resume", name="resume")
-     */
-    public function resume()
-    {
-        return $this->render('default/resume.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
