@@ -1,85 +1,85 @@
 $text-light: #4066b3;
 
 .login-dark {
+  position: relative;
   height: 100vh;
   background: #475d62 url(../images/zurich_firmenmodularschutz_header.jpg);
   background-size: cover;
-  position: relative;
 
   .title {
-    text-align: center;
     margin: 30px 0;
     color: $text-light;
+    text-align: center;
   }
 
   form {
-    max-width: 320px;
-    width: 90%;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 4px;
-    transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 90%;
+    max-width: 320px;
+    padding: 40px;
+    border-radius: 4px;
     color: #fff;
-    box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, .2);
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: $text-light;
       opacity: 1; /* Firefox */
     }
 
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: $text-light;
-    }
-
     ::-ms-input-placeholder { /* Microsoft Edge */
       color: $text-light;
     }
 
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $text-light;
+    }
+
     .form-control {
-      background: none;
       border: none;
       border-bottom: 1px solid $text-light;
       border-radius: 0;
-      box-shadow: none;
       outline: none;
       color: inherit;
+      background: none;
+      box-shadow: none;
     }
 
     .btn-primary {
-      background: #4f90c6;
+      margin-top: 26px;
+      padding: 11px;
       border: none;
       border-radius: 4px;
-      padding: 11px;
-      box-shadow: none;
-      margin-top: 26px;
-      text-shadow: none;
       outline: none;
+      text-shadow: none;
+      background: #4f90c6;
+      box-shadow: none;
     }
 
     .btn-primary:hover,
     .login-dark form,
     .btn-primary:active {
-      background: #4f90c6;
       outline: none;
+      background: #4f90c6;
     }
 
     .forgot {
       display: block;
-      text-align: center;
-      font-size: 12px;
       color: $text-light;
-      opacity: 0.9;
+      font-size: 12px;
+      text-align: center;
       text-decoration: none;
+      opacity: .9;
     }
 
     .forgot:hover,
     .login-dark form,
     .forgot:active {
-      opacity: 1;
       text-decoration: none;
+      opacity: 1;
     }
 
     .btn-primary:active {
