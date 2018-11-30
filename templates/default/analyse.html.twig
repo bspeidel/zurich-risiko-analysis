@@ -43,12 +43,7 @@
             99722 Nordhausen<br>
         </address>
         <div class="line"></div>
-        <h3 class="text-center">Absicherung und Risiko</h3>
-        <div class="gauge mx-auto mb-5"></div>
-        <div class="legend-container text-center">
-            <div class="dot-green" style="color: #fff">45%</div><h5 class="text-safe" style="display: inline-block">&nbsp;Absicherung</h5>
-            <div class="dot-red" style="color: #fff;">60%</div><h5 class="text-risk" style="display: inline-block">&nbsp;Risiko</h5>
-        </div>
+        <h3 class="text-center">Risiko managment</h3>
         <div class="card-columns analyse">
             <div class="card mt-3">
                 <div class="card-header">
@@ -77,13 +72,19 @@
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                     <div>
-                        <label class="text-risk" for="">Risiko</label>
+                        <label  for="">Absicherung</label>
+                        <div class="alert alert-danger d-flex align-content-end flex-wrap" role="alert">
+                            <i class="fas fa-times-circle fa-2x text-danger"></i><strong id="" class="slider-text"></strong>
+                        </div>
+                        <div class="alert alert-warning d-flex align-content-end flex-wrap" role="alert">
+                            <i class="fas fa-exclamation-circle fa-2x text-warning"></i><strong id="slider1_text" class="slider-text"></strong>
+                        </div>
+                        <div class="alert alert-success d-flex align-content-end flex-wrap" role="alert">
+                            <i class="fas fa-check-circle fa-2x text-success"></i><strong id="" class="slider-text"></strong>
+                        </div>
                         <div id="slider1" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
-                    <div class="mt-4">
-                        <label class="text-safe" for="">Absicherung</label>
-                        <div id="slider11" class="slider noUi-ltr noUi-horizontal mt-2"></div>
-                    </div>
+
                 </div>
             </div>
             <div class="card mt-3">
@@ -131,12 +132,8 @@
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                     <div>
-                        <label class="text-risk" for="">Risiko</label>
-                        <div id="slider2" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
-                    </div>
-                    <div class="mt-4">
                         <label class="text-safe" for="">Absicherung</label>
-                        <div id="slider22" class="slider noUi-ltr noUi-horizontal mt-2"></div>
+                        <div id="slider2" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
             </div>
@@ -167,12 +164,8 @@
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                     <div>
-                        <label class="text-risk" for="">Risiko</label>
-                        <div id="slider3" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
-                    </div>
-                    <div class="mt-4">
                         <label class="text-safe" for="">Absicherung</label>
-                        <div id="slider33" class="slider noUi-ltr noUi-horizontal mt-2"></div>
+                        <div id="slider3" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
             </div>
@@ -202,8 +195,8 @@
                 <div class="card-footer">
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                    Absicherung
-                    <div id="slider_4" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
+                    <label class="text-safe" for="">Absicherung</label>
+                    <div id="slider4" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
                 </div>
             </div>
             <div class="card mt-3">
@@ -232,8 +225,8 @@
                 <div class="card-footer">
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                    Absicherung
-                    <div id="slider_5" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
+                    <label class="text-safe" for="">Absicherung</label>
+                    <div id="slider5" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
                 </div>
             </div>
             <div class="card mt-3">
@@ -262,8 +255,8 @@
                 <div class="card-footer">
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                    Absicherung
-                    <div id="slider_6" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
+                    <label class="text-safe" for="">Absicherung</label>
+                    <div id="slider6" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
                 </div>
             </div>
             <div class="card mt-3">
@@ -450,105 +443,91 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.js"></script>
     <script src="https://rawgit.com/pablomolnar/radial-progress-chart/master/dist/radial-progress-chart.js"></script>
     <script>
-        new RadialProgressChart('.gauge', {
-            series: [
-                {
-                    value: 60,
-                    color: '#ff0000'
-                },
-                {
-                    value: 48,
-                    color: '#1EC481'
-                }
-            ]
-        });
-
         noUiSlider.create(slider1, {
-            start: 0,
             connect: [true, false],
-            // Disable animation on value-setting,
-            // so the sliders respond immediately.
-            animate: false,
+            start: 5,
+            step: 1,
             range: {
                 min: 0,
-                max: 100
+                max: 10
+            },
+            pips: {
+                mode: 'count',
+                values: 11,
+                density: 11
             }
         });
 
+        var pips = slider1.querySelectorAll('.noUi-value');
+
+        function clickOnPip() {
+            var value = Number(this.getAttribute('data-value'));
+            slider1.noUiSlider.set(value);
+        }
+
+        for (var i = 0; i < pips.length; i++) {
+
+            // For this example. Do this in CSS!
+            pips[i].style.cursor = 'pointer';
+            pips[i].addEventListener('click', clickOnPip);
+        }
+
+        slider1.noUiSlider.on('update', function (values, handle) {
+            $('#slider1_text').text(getLegend(values[handle]));
+
+        });
+
         noUiSlider.create(slider2, {
-            start: 0,
             connect: [true, false],
-            // Disable animation on value-setting,
-            // so the sliders respond immediately.
-            animate: false,
+            start: 5,
+            step: 1,
             range: {
                 min: 0,
-                max: 100
+                max: 10
+            },
+            pips: {
+                mode: 'count',
+                values: 11,
+                density: 11
             }
         });
 
         noUiSlider.create(slider3, {
-            start: 0,
             connect: [true, false],
-            // Disable animation on value-setting,
-            // so the sliders respond immediately.
-            animate: false,
+            start: 5,
+            step: 1,
             range: {
                 min: 0,
-                max: 100
+                max: 10
+            },
+            pips: {
+                mode: 'count',
+                values: 11,
+                density: 11
             }
         });
 
-        var slider11 = document.getElementById('slider11');
-        var slider22 = document.getElementById('slider22');
-        var slider33 = document.getElementById('slider33');
+        function getLegend(score) {
+            let legend = "";
+            console.log(score);
 
-        noUiSlider.create(slider11, {
-            start: [0, 0],
-            connect: [true, true, false],
-            range: {
-                'min': [0],
-                'max': [100]
+            if (score < 1) {
+                legend = " Kein Versicherungsshutz";
             }
-        });
 
-        noUiSlider.create(slider22, {
-            start: [0, 0],
-            connect: [true, true, false],
-            range: {
-                'min': [0],
-                'max': [100]
+            else if (score > 0 && score < 5 ) {
+                legend = " nicht ausreichender Versicherungsschutz";
             }
-        });
 
-        noUiSlider.create(slider33, {
-            start: [0, 0],
-            connect: [true, true, false],
-            range: {
-                'min': [0],
-                'max': [100]
+            else if (score > 4 && score < 10 ) {
+                legend = " Absicherung ist zu Überprüfen";
             }
-        });
 
-        var connect = slider11.querySelectorAll('.noUi-connect');
-        var connect2 = slider22.querySelectorAll('.noUi-connect');
-        var connect3 = slider33.querySelectorAll('.noUi-connect');
-        var classes = ['c-1-color', 'c-2-color', 'c-3-color'];
+            else if (score > 9 ) {
+                legend = " Versicherungsschutz in Ordnung und ausreichend";
+            }
 
-        for (var i = 0; i < connect.length; i++) {
-            connect[i].classList.add(classes[i]);
-            connect2[i].classList.add(classes[i]);
-            connect3[i].classList.add(classes[i]);
-        }
-
-        slider1.noUiSlider.on('slide', setLockedValues);
-        slider2.noUiSlider.on('slide', setLockedValues);
-        slider3.noUiSlider.on('slide', setLockedValues);
-
-        function setLockedValues() {
-            slider11.noUiSlider.set(['null', slider1.noUiSlider.get()]);
-            slider22.noUiSlider.set(['null', slider2.noUiSlider.get()]);
-            slider33.noUiSlider.set(['null', slider3.noUiSlider.get()]);
+            return legend;
         }
     </script>
 {% endblock javascripts  %}

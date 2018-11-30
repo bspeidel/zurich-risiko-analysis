@@ -2,7 +2,7 @@
   "plugins": [
     "stylelint-order"
   ],
-  "extends": "stylelint-config-standard",
+  "extends": "/usr/local/lib/node_modules/stylelint-config-standard",
   "rules": {
     "number-leading-zero": "never",
     "max-nesting-depth": 3,
