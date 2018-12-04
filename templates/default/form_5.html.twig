@@ -78,13 +78,11 @@
             </nav>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-10">
+                    <div class="col-12 text-center">
                         <h3>Erweiterte Absicherung Ihrer Elektronik/Maschinen-Werte</h3>
                     </div>
-                    <div class="col-2 float-sm-right text-right">
-                        <a href="#" class="btn btn-success">Speichern</a>
-                    </div>
                 </div>
+                <div class="ct-chart-form-5 mt-3"></div>
                 <div class="line"></div>
                 <form>
                     <div class="form-row">
@@ -219,8 +217,46 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 float-sm-right text-right mb-5">
+                            <a href="#" class="btn btn-success">Speichern</a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var data1 = {
+            labels: ['Sachsubstanz', 'Ertragsausfall', 'Haftungsrisiken'],
+            series: [33, 33, 33],
+        };
+
+        var options = {
+            height: '300px',
+            labelInterpolationFnc: function(value) {
+                return value[0]
+            }
+        };
+
+        var responsiveOptions = [
+            ['screen and (min-width: 640px)', {
+                chartPadding: 30,
+                labelOffset: 10,
+                labelInterpolationFnc: function(value) {
+                    return value;
+                }
+            }],
+            ['screen and (min-width: 1024px)', {
+                labelOffset: 20,
+                chartPadding: 0,
+            }]
+        ];
+
+        new Chartist.Pie('.ct-chart-form-5', data1, options, responsiveOptions);
+    </script>
+{% endblock javascripts %}

@@ -30,7 +30,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <h2>Analyse</h2>
+                <h2>Bedarfs- und Risikoanalyse</h2>
             </div>
             <div class="col text-right">
                 <a href="#" class="btn btn-primary"><i class="fas fa-envelope"></i> E-Mail senden</a>
@@ -43,7 +43,43 @@
             99722 Nordhausen<br>
         </address>
         <div class="line"></div>
-        <h3 class="text-center">Risiko managment</h3>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-block">Risiken des Unternehmens</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-primary btn-block">Risiken des Entscheiders</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-primary btn-block">Risiken der Mitarbeiter</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="ct-chart-company mt-5 mb-5"></div>
+            </div>
+            <div class="col">
+                <div class="ct-chart-decider mt-5 mb-5"></div>
+            </div>
+            <div class="col">
+                <div class="ct-chart-staff mt-5 mb-5"></div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div class="dot-risk" style="color: #fff;"></div><span class="text-risk">&nbsp;Kein oder nocht ausreichender Versicherungschutz</span>
+            </div>
+            <div class="col">
+                <div class="dot-tocheck" style="color: #fff"></div><span class="text-tocheck">&nbsp;Absicherung ist zu Überprüfen</span>
+            </div>
+            <div class="col">
+                <div class="dot-safe" style="color: #fff"></div><span class="text-safe">&nbsp;Versicherungsschutz in Ordnung und ausreichend</span>
+            </div>
+            <div class="col">
+                <div class="dot-notrelevant" style="color: #fff;"></div><span class="text-notrelevant">&nbsp;Das risiko ist nicht Bestandteil des Unternehmens</span>
+            </div>
+        </div>
         <div class="card-columns analyse">
             <div class="card mt-3">
                 <div class="card-header">
@@ -71,20 +107,6 @@
                 <div class="card-footer">
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                    <div>
-                        <label  for="">Absicherung</label>
-                        <div class="alert alert-danger d-flex align-content-end flex-wrap" role="alert">
-                            <i class="fas fa-times-circle fa-2x text-danger"></i><strong id="" class="slider-text"></strong>
-                        </div>
-                        <div class="alert alert-warning d-flex align-content-end flex-wrap" role="alert">
-                            <i class="fas fa-exclamation-circle fa-2x text-warning"></i><strong id="slider1_text" class="slider-text"></strong>
-                        </div>
-                        <div class="alert alert-success d-flex align-content-end flex-wrap" role="alert">
-                            <i class="fas fa-check-circle fa-2x text-success"></i><strong id="" class="slider-text"></strong>
-                        </div>
-                        <div id="slider1" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
-                    </div>
-
                 </div>
             </div>
             <div class="card mt-3">
@@ -132,8 +154,9 @@
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                     <div>
-                        <label class="text-safe" for="">Absicherung</label>
-                        <div id="slider2" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider1" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
             </div>
@@ -164,8 +187,9 @@
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                     <div>
-                        <label class="text-safe" for="">Absicherung</label>
-                        <div id="slider3" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider2" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
             </div>
@@ -195,8 +219,11 @@
                 <div class="card-footer">
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                    <label class="text-safe" for="">Absicherung</label>
-                    <div id="slider4" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
+                    <div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider3" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    </div>
                 </div>
             </div>
             <div class="card mt-3">
@@ -225,8 +252,11 @@
                 <div class="card-footer">
                     <label for="note">Notizen</label>
                     <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                    <label class="text-safe" for="">Absicherung</label>
-                    <div id="slider5" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
+                    <div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider4" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    </div>
                 </div>
             </div>
             <div class="card mt-3">
@@ -440,8 +470,6 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.js"></script>
-    <script src="https://rawgit.com/pablomolnar/radial-progress-chart/master/dist/radial-progress-chart.js"></script>
     <script>
         noUiSlider.create(slider1, {
             connect: [true, false],
@@ -473,8 +501,7 @@
         }
 
         slider1.noUiSlider.on('update', function (values, handle) {
-            $('#slider1_text').text(getLegend(values[handle]));
-
+            getLegend(this.target.id, values[handle]);
         });
 
         noUiSlider.create(slider2, {
@@ -492,6 +519,10 @@
             }
         });
 
+        slider2.noUiSlider.on('update', function (values, handle) {
+            getLegend(this.target.id, values[handle]);
+        });
+
         noUiSlider.create(slider3, {
             connect: [true, false],
             start: 5,
@@ -507,27 +538,95 @@
             }
         });
 
-        function getLegend(score) {
-            let legend = "";
-            console.log(score);
+        slider3.noUiSlider.on('update', function (values, handle) {
+            getLegend(this.target.id, values[handle]);
+        });
+
+        noUiSlider.create(slider4, {
+            connect: [true, false],
+            start: 5,
+            step: 1,
+            range: {
+                min: 0,
+                max: 10
+            },
+            pips: {
+                mode: 'count',
+                values: 11,
+                density: 11
+            }
+        });
+
+
+        slider4.noUiSlider.on('update', function (values, handle) {
+            getLegend(this.target.id, values[handle]);
+        });
+        function getLegend(id, score) {
+            console.log(id);
+            let slider_id = '#' + id;
+
+            console.log(slider_id);
 
             if (score < 1) {
-                legend = " Kein Versicherungsshutz";
+                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-danger d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-times-circle fa-2x text-danger"></i><strong class="slider-text"> Kein Versicherungsshutz</strong></div>');
             }
 
             else if (score > 0 && score < 5 ) {
-                legend = " nicht ausreichender Versicherungsschutz";
+                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-danger d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-times-circle fa-2x text-danger"></i><strong class="slider-text"> nicht ausreichender Versicherungsschutz</strong></div>');
             }
 
             else if (score > 4 && score < 10 ) {
-                legend = " Absicherung ist zu Überprüfen";
+                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-warning d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-exclamation-circle fa-2x text-warning"></i><strong class="slider-text"> Absicherung ist zu Überprüfen</strong></div>');
             }
 
             else if (score > 9 ) {
-                legend = " Versicherungsschutz in Ordnung und ausreichend";
+                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-success d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-check-circle fa-2x text-success"></i><strong class="slider-text"> Versicherungsschutz in Ordnung und ausreichend</strong></div>');
             }
-
-            return legend;
         }
+
+        var data1 = {
+            labels: ['Sachsubstanz', 'Ertragsausfall', 'Haftungsrisiken'],
+            series: [33, 33, 33],
+        };
+
+        var data2 = {
+            labels: ['Vorsorge', 'Haftung', 'Private Risiken', 'Unfall', 'Gesundheit/Pflege'],
+            series: [20, 20, 20, 20, 20],
+        };
+
+        var data3 = {
+            labels: ['Krankenversicherung', 'Unfallschutz', 'Altersvorsorge'],
+            series: [33, 33, 33],
+        };
+
+        var options = {
+            height: '300px',
+            labelInterpolationFnc: function(value) {
+                return value[0]
+            }
+        };
+
+        var responsiveOptions = [
+            ['screen and (min-width: 640px)', {
+                chartPadding: 30,
+                labelOffset: 10,
+                labelInterpolationFnc: function(value) {
+                    return value;
+                }
+            }],
+            ['screen and (min-width: 1024px)', {
+                labelOffset: 20,
+                chartPadding: 0,
+            }]
+        ];
+
+        new Chartist.Pie('.ct-chart-company', data1, options, responsiveOptions);
+        new Chartist.Pie('.ct-chart-decider', data2, options, responsiveOptions);
+        new Chartist.Pie('.ct-chart-staff', data3, options, responsiveOptions);
+
+        $( document ).ready(function() {
+
+        });
+
     </script>
 {% endblock javascripts  %}

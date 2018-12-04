@@ -10,16 +10,6 @@
   background: rgba(255, 153, 18, 0);
 }
 
-.text-risk {
-  color: #ff394f;
-  font-weight: 700;
-}
-
-.text-safe {
-  color: #1ec481;
-  font-weight: 700;
-}
-
 .c-1-color {
   background: #1ec481;
 }
@@ -82,8 +72,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 .slider-text {
-  line-height: 30px;
   margin-left: 10px;
+  line-height: 30px;
 }
 
 @media (max-width: 767px) {
