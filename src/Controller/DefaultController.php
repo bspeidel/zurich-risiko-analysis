@@ -48,6 +48,16 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * @Route("/risks", name="risks")
+     */
+    public function risks()
+    {
+        return $this->render('default/risks.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    /**
      * @Route("/form_2", name="form_2")
      */
     public function form2()

@@ -9,43 +9,16 @@
             </div>
             <ul class="list-unstyled components">
                 <li>
-                    <a href="{{ path('form_2') }}">Haftungsrisiken</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_3') }}">Gebäude-Werte</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_4') }}">Inhalt-Werte</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_5') }}">Elektronik/Maschinen-Werte</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_6') }}">Unterbrechung Ihres Betriebes</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_7') }}">Kosten bei Rechtsangelegenheiten</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_8') }}">Transporte</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_9') }}">Kfz-Risiken</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_10') }}">Spezial-Risiken</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_11') }}">Mitarbeiter</a>
-                </li>
-                <li>
-                    <a href="{{ path('form_12') }}">Belegschaft / Inhabers / GGf / etc.</a>
+                    <a href="{{ path('form_1') }}">Unternehmensdaten</a>
                 </li>
                 <li class="active">
-                    <a href="{{ path('form_13') }}">Offene Punkte und weiteres Vorgehen</a>
+                    <a href="{{ path('risks') }}">Risiken ermitteln</a>
                 </li>
             </ul>
             <ul class="list-unstyled CTAs">
+                <li>
+                    <a  href="{{ path('form_2') }}" class="btn-primary mt-3"><i class="fas fa-sliders-h"></i> Jahresgespräch</a>
+                </li>
                 <li>
                     <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-sliders-h"></i> Analyse</a>
                 </li>
@@ -60,9 +33,6 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
                     <ul class="nav navbar-nav navbar-expand ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('selectuser') }}"><i class="fas fa-users"></i> Kunden</a>
@@ -76,18 +46,25 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h3>Offene Punkte und weiteres Vorgehen</h3>
+                        <h3>Risiken ermitteln</h3>
                     </div>
                 </div>
                 <div class="line"></div>
                 <form>
-                    <div class="form-group">
-                        <div class="card">
-                            <div class="card-body">
-                                <textarea type="text-area" class="form-control" id="place" rows="10" placeholder=""></textarea>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Risiken des Unternehmens</h3>
+                    <h3>Sachsubstanz</h3>
+                    <h3>Ertragsausfall</h3>
+                    <h3>Haftungsrisiken</h3>
+                    <h2>Risiken des Entscheiders</h2>
+                    <h3>Vorsorge</h3>
+                    <h3>Haftung</h3>
+                    <h3>Private Risiken</h3>
+                    <h3>Unfall</h3>
+                    <h3>Gesundheit/Pflege</h3>
+                    <h2>Risiken des Mitarbeiter</h2>
+                    <h3>Krankenversicherung</h3>
+                    <h3>Altersvorsorge</h3>
+                    <h3>Unfallschutz</h3>
                     <div class="row">
                         <div class="col-12 float-sm-right text-right mb-5">
                             <a href="#" class="btn btn-success">Speichern</a>
