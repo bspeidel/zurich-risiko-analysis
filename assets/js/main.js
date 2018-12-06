@@ -1,5 +1,4 @@
 const $ = require('jquery');
-import './chart.js';
 import './slider.js';
 
 $(document).ready(function () {
