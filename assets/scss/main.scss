@@ -94,93 +94,6 @@ a:focus {
   font-size: 1.2rem;
 }
 
-.ct-series {
-  stroke: white;
-  stroke-width: 5px;
-}
-
-text.ct-label {
-  line-height: 1;
-  fill: rgba(0, 0, 0, .8);
-  color: rgba(0, 0, 0, .8);
-  font-size: .75rem;
-}
-
-.ct-chart-form-2,
-.ct-chart-form-7,
-.ct-chart-form-10 {
-  .ct-series-a .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-
-  .ct-series-b .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-
-  .ct-series-c .ct-slice-pie {
-    fill: rgba(79, 144, 199, 1);
-  }
-}
-
-.ct-chart-form-3,
-.ct-chart-form-4,
-.ct-chart-form-5,
-.ct-chart-form-8,
-.ct-chart-form-9,
-.ct-chart-form-11 {
-  .ct-series-a .ct-slice-pie {
-    fill: rgba(79, 144, 199, 1);
-  }
-
-  .ct-series-b .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-
-  .ct-series-c .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-}
-
-.ct-chart-form-6 {
-  .ct-series-a .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-
-  .ct-series-b .ct-slice-pie {
-    fill: rgba(79, 144, 199, 1);
-  }
-
-  .ct-series-c .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-}
-
-.ct-chart-form-12 {
-  .ct-series-a .ct-slice-pie {
-    fill: rgba(79, 144, 199, 1);
-  }
-
-  .ct-series-b .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-
-  .ct-series-c .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-
-  .ct-series-d .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-
-  .ct-series-e .ct-slice-pie {
-    fill: rgba(79, 144, 199, .15);
-  }
-}
-
-.chart {
-  max-width: 250px;
-}
-
 .card {
   position: relative;
   display: -webkit-flex;
@@ -261,42 +174,6 @@ text.ct-label {
   margin-bottom: 15px;
   padding: 0 20px;
   border: none;
-}
-
-.ct-chart-decider {
-  .ct-series-a .ct-slice-pie {
-    fill: #ff394f;
-  }
-
-  .ct-series-b .ct-slice-pie {
-    fill: #ff9912;
-  }
-
-  .ct-series-c .ct-slice-pie {
-    fill: #1ec481;
-  }
-
-  .ct-series-d .ct-slice-pie {
-    fill: #ff9912;
-  }
-
-  .ct-series-e .ct-slice-pie {
-    fill: #1ec481;
-  }
-}
-
-.ct-chart-staff {
-  .ct-series-a .ct-slice-pie {
-    fill: #ff394f;
-  }
-
-  .ct-series-b .ct-slice-pie {
-    fill: #bec4be;
-  }
-
-  .ct-series-c .ct-slice-pie {
-    fill: #1ec481;
-  }
 }
 
 /* ---------------------------------------------------

@@ -2,6 +2,7 @@
     {% block stylesheets %}
         {{ parent() }}
         <link rel="stylesheet" href="{{ asset('build/css/slider.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('build/css/chart.css') }}"/>
     {% endblock %}
 {% block body %}
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -81,7 +82,7 @@
                         </div>
                         <div class="card-body">
                             <canvas id="chart_company" class="chart" width="80%" height="80%"></canvas>
-                            <div class="percent"><span id="percent_company">50</span>%</div>
+                            <div class="percent"><span id="company_percent">50</span>%</div>
                         </div>
                     </div>
                 </a>
@@ -94,7 +95,7 @@
                         </div>
                         <div class="card-body">
                             <canvas id="chart_decider" class="chart" width="80%" height="80%"></canvas>
-                            <div class="percent"><span id="percent_decider">50</span>%</div>
+                            <div class="percent"><span id="decider_percent">50</span>%</div>
                         </div>
                     </div>
                 </a>
@@ -107,13 +108,13 @@
                         </div>
                         <div class="card-body">
                             <canvas id="chart_staff" class="chart" width="80%" height="80%"></canvas>
-                            <div class="percent"><span id="percent_staff">50</span>%</div>
+                            <div class="percent"><span id="staff_percent">50</span>%</div>
                         </div>
                     </div>
                 </a>
             </div>
         </div>
-        <div class="collapse" id="collapse_cards_company">
+        <div class="collapse show" id="collapse_cards_company">
             <div class="card-columns analyse">
                 <div class="card mt-3">
                     <div class="card-header">
@@ -123,43 +124,13 @@
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Versicherungssumme Betriebshaftpflicht</strong></p>
-                            500.000€
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Reparieren bzw. warten Sie Kundeneigentum auf Ihrem Grundstück?</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Haben Sie Arbeisgeräte / Werkzeuge gemietet, für die Sie die Gefahr tragen? (Mietsachschäden beweglich)</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Werden Ihrer Arbeitsmaschinen / Stapler auch außerhalb Ihres Betriebsgrundstückes eingesetzt? (Sondergenehmigung / AKB_Deckung)</strong></p>
-                            <i class="fas fa-times"></i> NEIN
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Reparieren bzw. warten Sie Kundeneigentum auf Ihrem Grundstück?</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Reparieren bzw. warten Sie Kundeneigentum auf Ihrem Grundstück?</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Reparieren bzw. warten Sie Kundeneigentum auf Ihrem Grundstück?</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                         <div>
                             <label  for="">Absicherung</label>
                             <div class="alert"></div>
-                            <div id="slider1" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            <div id="slider2" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                         </div>
                     </div>
                 </div>
@@ -167,32 +138,17 @@
                     <div class="card-header">
                         <h5>Absicherung Ihrer Gebäude-Werte
                             <span class="float-sm-right">
-                            <a class="btn btn-danger ml-1" href="#"><i class="fas fa-eye-slash"></i> ausblenden</a>
-                        </span>
-                            <span class="float-sm-right">
                             <a class="btn btn-primary" href="{{ path('form_3') }}"><i class="fas fa-edit"></i> bearbeiten</a>
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was ist die aktuelle Situation in Ihrem Unternehmen?</strong></p>
-                            Eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</strong></p>
-                            Dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                         <div>
                             <label  for="">Absicherung</label>
                             <div class="alert"></div>
-                            <div id="slider2" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            <div id="slider3" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                         </div>
                     </div>
                 </div>
@@ -200,32 +156,17 @@
                     <div class="card-header">
                         <h5>Absicherung Ihrer Inhalt-Werte
                             <span class="float-sm-right">
-                            <a class="btn btn-danger ml-1" href="#"><i class="fas fa-eye-slash"></i> ausblenden</a>
-                        </span>
-                            <span class="float-sm-right">
                             <a class="btn btn-primary" href="{{ path('form_4') }}"><i class="fas fa-edit"></i> bearbeiten</a>
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was ist die aktuelle Situation in Ihrem Unternehmen?</strong></p>
-                            Eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</strong></p>
-                            Dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                         <div>
                             <label  for="">Absicherung</label>
                             <div class="alert"></div>
-                            <div id="slider3" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            <div id="slider4" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                         </div>
                     </div>
                 </div>
@@ -233,32 +174,17 @@
                     <div class="card-header">
                         <h5>Absicherung Ihrer Elektronik/Maschinen-Werte
                             <span class="float-sm-right">
-                            <a class="btn btn-danger ml-1" href=""><i class="fas fa-eye-slash"></i> ausblenden</a>
-                        </span>
-                            <span class="float-sm-right">
                             <a class="btn btn-primary" href="{{ path('form_5') }}"><i class="fas fa-edit"></i> bearbeiten</a>
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was ist die aktuelle Situation in Ihrem Unternehmen?</strong></p>
-                            Eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</strong></p>
-                            Dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
                         <div>
                             <label  for="">Absicherung</label>
                             <div class="alert"></div>
-                            <div id="slider4" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            <div id="slider5" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                         </div>
                     </div>
                 </div>
@@ -266,61 +192,32 @@
                     <div class="card-header">
                         <h5>Absicherung bei einer Unterbrechung Ihres Betriebes
                             <span class="float-sm-right">
-                            <a class="btn btn-danger ml-1" href="#"><i class="fas fa-eye-slash"></i> ausblenden</a>
-                        </span>
-                            <span class="float-sm-right">
                             <a class="btn btn-primary" href="{{ path('form_6') }}"><i class="fas fa-edit"></i> bearbeiten</a>
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was ist die aktuelle Situation in Ihrem Unternehmen?</strong></p>
-                            Eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</strong></p>
-                            Dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label class="text-safe" for="">Absicherung</label>
-                        <div id="slider6" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider6" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
                 <div class="card mt-3">
                     <div class="card-header">
                         <h5>Absicherung Ihrer Kosten bei Rechtsangelegenheiten
                             <span class="float-sm-right">
-                            <a class="btn btn-primary" href="{{ path('form_8') }}"><i class="fas fa-edit"></i> bearbeiten</a>
+                            <a class="btn btn-primary" href="{{ path('form_7') }}"><i class="fas fa-edit"></i> bearbeiten</a>
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Sie sind aktuell in folgenden Rechtsbereichen abgesichert</strong></p>
-                            Privat
-                        </li>
-                        <li class="list-group-item">
-                            Haus- und Grundbesitz vermietet
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Anstellungsvertrag-RS für die Geschäftsführung</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Versicherungssumme</strong></p>
-                            500.000€
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider7" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
                 <div class="card mt-3">
@@ -331,62 +228,28 @@
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Wie hoch schätzen Sie das Risiko von Zahlungsausfällen durch Ihre geverblicken Kunden ein?</strong></p>
-                            sehr hoch
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Werden von Ihren Kunden Bürgschäften eingefordert?</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Welche Folgen können Datenklau und Datenmissbrauch bei Ihnen haben (Cyber-Attacken)?</strong></p>
-                            Es wäre dramatisch
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <div>
-                            <label for="">Risiko</label>
-                        </div>
-                        <div class="mt-4">
-                            <label for="">Absicherung</label>
-                        </div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider8" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
                 <div class="card mt-3">
                     <div class="card-header">
                         <h5>Absicherung Ihrer Kfz-Risiken
                             <span class="float-sm-right">
-                            <a class="btn btn-primary" href="{{ path('form_8') }}"><i class="fas fa-edit"></i> bearbeiten</a>
+                            <a class="btn btn-primary" href="{{ path('form_9') }}"><i class="fas fa-edit"></i> bearbeiten</a>
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Wie hoch schätzen Sie das Risiko von Zahlungsausfällen durch Ihre geverblicken Kunden ein?</strong></p>
-                            sehr hoch
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Werden von Ihren Kunden Bürgschäften eingefordert?</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Welche Folgen können Datenklau und Datenmissbrauch bei Ihnen haben (Cyber-Attacken)?</strong></p>
-                            Es wäre dramatisch
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <div>
-                            <label for="">Risiko</label>
-                        </div>
-                        <div class="mt-4">
-                            <label for="">Absicherung</label>
-                        </div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider9" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
                 <div class="card mt-3">
@@ -397,89 +260,12 @@
                         </span>
                         </h5>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Wie hoch schätzen Sie das Risiko von Zahlungsausfällen durch Ihre geverblicken Kunden ein?</strong></p>
-                            sehr hoch
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Werden von Ihren Kunden Bürgschäften eingefordert?</strong></p>
-                            <i class="fas fa-check"></i> JA
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Welche Folgen können Datenklau und Datenmissbrauch bei Ihnen haben (Cyber-Attacken)?</strong></p>
-                            Es wäre dramatisch
-                        </li>
-                    </ul>
                     <div class="card-footer">
                         <label for="note">Notizen</label>
                         <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <div>
-                            <label for="">Risiko</label>
-                        </div>
-                        <div class="mt-4">
-                            <label for="">Absicherung</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Mitarbeiter
-                            <span class="float-sm-right">
-                            <a class="btn btn-primary" href="#"><i class="fas fa-edit"></i> bearbeiten</a>
-                        </span>
-                        </h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was ist die aktuelle Situation in Ihrem Unternehmen?</strong></p>
-                            Eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</strong></p>
-                            Dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        </li>
-                    </ul>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <div>
-                            <label for="">Risiko</label>
-                            <div id="slider_1454" class="noUi-av noUi-ltr noUi-horizontal mt-2"></div>
-                        </div>
-                        <div class="mt-4">
-                            <label for="">Absicherung</label>
-                            <div id="slider_114545" class="slider noUi-ltr noUi-horizontal mt-2"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mt-3">
-                    <div class="card-header">
-                        <h5>Vorsorge und Absicherung Belegschaft / Inhabers / GGf / etc.
-                            <span class="float-sm-right">
-                            <a class="btn btn-primary" href="{{ path('form_12') }}"><i class="fas fa-edit"></i> bearbeiten</a>
-                        </span>
-                        </h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was ist die aktuelle Situation in Ihrem Unternehmen?</strong></p>
-                            Eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </li>
-                        <li class="list-group-item">
-                            <p class="card-text"><strong>Was sind Ihre Wünsche, Ziele und Erwartungen an das heutige Gespräch?</strong></p>
-                            Dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        </li>
-                    </ul>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        Absicherung
-                        <div id="slider_12" class="noUi-target noUi-ltr noUi-horizontal mt-2"></div>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider10" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
                     </div>
                 </div>
                 <div class="card mt-3">
@@ -498,224 +284,67 @@
         </div>
         <div class="collapse" id="collapse_cards_decider">
             <div class="card-columns analyse">
-
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Vorsorge und Absicherung Belegschaft / Inhabers / GGf / etc.
+                            <span class="float-sm-right">
+                            <a class="btn btn-primary" href="{{ path('form_12') }}"><i class="fas fa-edit"></i> bearbeiten</a>
+                        </span>
+                        </h5>
+                    </div>
+                    <div class="card-footer">
+                        <label for="note">Notizen</label>
+                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider_12" class="slider-decider noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Offene Punkte und weiteres Vorgehen
+                            <span class="float-sm-right">
+                            <a class="btn btn-primary" href="{{ path('form_13') }}"><i class="fas fa-edit"></i> bearbeiten</a>
+                        </span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="collapse" id="collapse_cards_staff">
             <div class="card-columns analyse">
-
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Absicherung Ihrer Mitarbeiter
+                            <span class="float-sm-right">
+                            <a class="btn btn-primary" href="{{ path('form_11') }}"><i class="fas fa-edit"></i> bearbeiten</a>
+                        </span>
+                        </h5>
+                    </div>
+                    <div class="card-footer">
+                        <label for="note">Notizen</label>
+                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
+                        <label  for="">Absicherung</label>
+                        <div class="alert"></div>
+                        <div id="slider11" class="slider-staff noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Offene Punkte und weiteres Vorgehen
+                            <span class="float-sm-right">
+                            <a class="btn btn-primary" href="{{ path('form_13') }}"><i class="fas fa-edit"></i> bearbeiten</a>
+                        </span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
     </div>
 {% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    <script>
-        noUiSlider.create(slider1, {
-            connect: [true, false],
-            start: 5,
-            step: 1,
-            range: {
-                min: 0,
-                max: 10
-            },
-            pips: {
-                mode: 'count',
-                values: 11,
-                density: 11
-            }
-        });
-
-        var pips = slider1.querySelectorAll('.noUi-value');
-
-        function clickOnPip() {
-            var value = Number(this.getAttribute('data-value'));
-            slider1.noUiSlider.set(value);
-        }
-
-        for (var i = 0; i < pips.length; i++) {
-
-            // For this example. Do this in CSS!
-            pips[i].style.cursor = 'pointer';
-            pips[i].addEventListener('click', clickOnPip);
-        }
-
-        slider1.noUiSlider.on('update', function (values, handle) {
-            getLegend(this.target.id, values[handle]);
-        });
-
-        noUiSlider.create(slider2, {
-            connect: [true, false],
-            start: 5,
-            step: 1,
-            range: {
-                min: 0,
-                max: 10
-            },
-            pips: {
-                mode: 'count',
-                values: 11,
-                density: 11
-            }
-        });
-
-        slider2.noUiSlider.on('update', function (values, handle) {
-            getLegend(this.target.id, values[handle]);
-        });
-
-        noUiSlider.create(slider3, {
-            connect: [true, false],
-            start: 5,
-            step: 1,
-            range: {
-                min: 0,
-                max: 10
-            },
-            pips: {
-                mode: 'count',
-                values: 11,
-                density: 11
-            }
-        });
-
-        slider3.noUiSlider.on('update', function (values, handle) {
-            getLegend(this.target.id, values[handle]);
-        });
-
-        noUiSlider.create(slider4, {
-            connect: [true, false],
-            start: 5,
-            step: 1,
-            range: {
-                min: 0,
-                max: 10
-            },
-            pips: {
-                mode: 'count',
-                values: 11,
-                density: 11
-            }
-        });
-
-
-        slider4.noUiSlider.on('update', function (values, handle) {
-            getLegend(this.target.id, values[handle]);
-        });
-        function getLegend(id, score) {
-            console.log(id);
-            let slider_id = '#' + id;
-
-            console.log(slider_id);
-
-            if (score < 1) {
-                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-danger d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-times-circle fa-2x text-danger"></i><strong class="slider-text"> Kein Versicherungsshutz</strong></div>');
-            }
-
-            else if (score > 0 && score < 5 ) {
-                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-danger d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-times-circle fa-2x text-danger"></i><strong class="slider-text"> nicht ausreichender Versicherungsschutz</strong></div>');
-            }
-
-            else if (score > 4 && score < 10 ) {
-                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-warning d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-exclamation-circle fa-2x text-warning"></i><strong class="slider-text"> Absicherung ist zu Überprüfen</strong></div>');
-            }
-
-            else if (score > 9 ) {
-                $(slider_id).prev('.alert').replaceWith('<div class="alert alert-success d-flex align-content-end flex-wrap" role="alert"><i class="fas fa-check-circle fa-2x text-success"></i><strong class="slider-text"> Versicherungsschutz in Ordnung und ausreichend</strong></div>');
-            }
-        }
-
-        let ctx_company = document.getElementById("chart_company");
-        let chart_company = new Chart(ctx_company, {
-            type: 'doughnut',
-            data: {
-                datasets: [{
-                    label: 'Sollwert',
-                    data: [20, 80],
-                    backgroundColor: [
-                        'rgba(79, 144, 199, 1)',
-                        'rgba(79, 144, 199, .1)'
-                    ],
-                    borderColor: [
-                        'rgba(79, 144, 199, 1)',
-                        'rgba(79, 144, 199, .1)'
-                    ],
-                    borderWidth: 1
-                }],
-                labels: [
-                    'Absicherung',
-                    'Risiko',
-                ]
-            },
-            options: {
-                cutoutPercentage: 75,
-                legend: {
-                    display: false
-                }
-            }
-        });
-
-        let ctx_decider = document.getElementById("chart_decider");
-        let chart_decider = new Chart(ctx_decider, {
-            type: 'doughnut',
-            data: {
-                datasets: [{
-                    label: 'Sollwert',
-                    data: [80, 20],
-                    backgroundColor: [
-                        'rgba(79, 144, 199, 1)',
-                        'rgba(79, 144, 199, .1)'
-                    ],
-                    borderColor: [
-                        'rgba(79, 144, 199, 1)',
-                        'rgba(79, 144, 199, .1)'
-                    ],
-                    borderWidth: 1
-                }],
-                labels: [
-                    'Absicherung',
-                    'Risiko',
-                ]
-            },
-            options: {
-                cutoutPercentage: 75,
-                legend: {
-                    display: false
-                }
-            }
-        });
-
-        let ctx_staff = document.getElementById("chart_staff");
-        let chart_staff = new Chart(ctx_staff, {
-            type: 'doughnut',
-            data: {
-                datasets: [{
-                    label: 'Sollwert',
-                    data: [50, 50],
-                    backgroundColor: [
-                        'rgba(79, 144, 199, 1)',
-                        'rgba(79, 144, 199, .1)'
-                    ],
-                    borderColor: [
-                        'rgba(79, 144, 199, 1)',
-                        'rgba(79, 144, 199, .1)'
-                    ],
-                    borderWidth: 1
-                }],
-                labels: [
-                    'Absicherung',
-                    'Risiko',
-                ]
-            },
-            options: {
-                cutoutPercentage: 75,
-                legend: {
-                    display: false
-                }
-            }
-        });
-    </script>
-{% endblock javascripts  %}

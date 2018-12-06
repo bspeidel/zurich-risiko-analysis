@@ -29,25 +29,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="{{ asset('build/main.js') }}"></script>
-    <script>
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-            $('.searchbox-input').on('keyup',function () {
-                console.log(filter);
-                //$('.card').show();
-                var filter = $(this).val(); // get the value of the input, which we filter on
-                console.log(filter);
-                $('.container-fluid').find(".card:not(:contains(" + filter + "))").addClass('d-none');
-                if (!this.value) {
-                    $('.container-fluid').find(".card").removeClass('d-none');
-                }
-            });
-        });
-    </script>
+    {{ encore_entry_script_tags('app') }}
+    {#<script>#}
+        {#$(document).ready(function () {#}
+            {#$('#sidebarCollapse').on('click', function () {#}
+                {#$('#sidebar').toggleClass('active');#}
+                {#$(this).toggleClass('active');#}
+            {#});#}
+            {#$('.searchbox-input').on('keyup',function () {#}
+                {#console.log(filter);#}
+                {#//$('.card').show();#}
+                {#var filter = $(this).val(); // get the value of the input, which we filter on#}
+                {#console.log(filter);#}
+                {#$('.container-fluid').find(".card:not(:contains(" + filter + "))").addClass('d-none');#}
+                {#if (!this.value) {#}
+                    {#$('.container-fluid').find(".card").removeClass('d-none');#}
+                {#}#}
+            {#});#}
+        {#});#}
+    {#</script>#}
 {% endblock %}
 </body>
 </html>

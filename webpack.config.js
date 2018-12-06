@@ -6,28 +6,19 @@ Encore
     // public path used by the web server to access the output path
     .setPublicPath('/build')
 
-    .addEntry('main', './assets/js/main.js')
+    .addEntry('app', './assets/js/main.js')
     .addEntry('favicon', './assets/images/favicon.ico')
     .addStyleEntry('css/index', './assets/scss/main.scss')
     .addStyleEntry('css/login', './assets/scss/login.scss')
     .addStyleEntry('css/slider', './assets/scss/slider.scss')
-    .addStyleEntry('css/pie', './assets/scss/pie.scss')
+    .addStyleEntry('css/chart', './assets/scss/chart.scss')
 
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
-    // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
-
-    // enables Sass/SCSS support
     .enableSassLoader()
-
-    // uncomment if you use TypeScript
-    //.enableTypeScriptLoader()
-
-    // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
-;
 
 module.exports = Encore.getWebpackConfig();

@@ -44,30 +44,75 @@
                 </div>
             </nav>
             <div class="container-fluid">
+                <h5 class="card-title">Linde Material Handling GmbH
+                    <a href="{{ path('form_1') }}"><i class="fas fa-edit"></i></a>
+                </h5>
                 <div class="row">
                     <div class="col-12 text-center">
                         <h3>Risiken ermitteln</h3>
                     </div>
                 </div>
                 <div class="line"></div>
-                <form>
-                    <h3>Risiken des Unternehmens</h3>
-                    <h3>Sachsubstanz</h3>
-                    <h3>Ertragsausfall</h3>
-                    <h3>Haftungsrisiken</h3>
-                    <h2>Risiken des Entscheiders</h2>
-                    <h3>Vorsorge</h3>
-                    <h3>Haftung</h3>
-                    <h3>Private Risiken</h3>
-                    <h3>Unfall</h3>
-                    <h3>Gesundheit/Pflege</h3>
-                    <h2>Risiken des Mitarbeiter</h2>
-                    <h3>Krankenversicherung</h3>
-                    <h3>Altersvorsorge</h3>
-                    <h3>Unfallschutz</h3>
-                    <div class="row">
-                        <div class="col-12 float-sm-right text-right mb-5">
-                            <a href="#" class="btn btn-success">Speichern</a>
+                <form class="form-row">
+                    <div class="col">
+                        <h3>Risiken des Unternehmens</h3>
+                        <h4>Haftungsrisiken</h4>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                            <label class="custom-control-label" for="customCheck2">Haftungsrisiken</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck7" checked>
+                            <label class="custom-control-label" for="customCheck7">Rechtsschutz</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck10" checked>
+                            <label class="custom-control-label" for="customCheck10">Spezial-Risiken</label>
+                        </div>
+                        <h4>Sachsubstanz</h4>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                            <label class="custom-control-label" for="customCheck3">Gebäude</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                            <label class="custom-control-label" for="customCheck4">Inhalt</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck5" checked>
+                            <label class="custom-control-label" for="customCheck5">Elektronik</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck8" checked>
+                            <label class="custom-control-label" for="customCheck8">Werksverkehr</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck9" checked>
+                            <label class="custom-control-label" for="customCheck9">Kfz-Risiken</label>
+                        </div>
+                        <h4>Ertragsausfall</h4>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck6" checked>
+                            <label class="custom-control-label" for="customCheck6">Betriebsunterbrechung</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>Risiken des Entscheiders</h3>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck12" checked>
+                            <label class="custom-control-label" for="customCheck12">Vorsorge Inhaber / GGF</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>Risiken des Mitarbeiter</h3>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck11" checked>
+                            <label class="custom-control-label" for="customCheck11">Absicherung Mitarbeiter</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 float-sm-right text-right mb-5">
+                                <a href="#" class="btn btn-success">Speichern</a>
+                            </div>
                         </div>
                     </div>
                 </form>
