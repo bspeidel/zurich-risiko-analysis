@@ -36,6 +36,12 @@ a:focus {
   transition: all .3s;
 }
 
+.container-chart {
+  position: fixed;
+  top: 100px;
+  width: 40%;
+}
+
 .navbar {
   margin-bottom: 40px;
   padding: 25px 10px;
@@ -111,6 +117,12 @@ a:focus {
   background-color: #f2f0ee;
   -webkit-background-clip: border-box;
   background-clip: border-box;
+  -webkit-box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .15);
+  box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .15);
+}
+
+.card-header {
+  padding: 0.5rem 1.25rem;
 }
 
 .card-header h5 {
@@ -122,8 +134,27 @@ a:focus {
   }
 }
 
+.card-columns.user {
+  .card-header {
+    background: linear-gradient(135deg, #eef1f5, #fff);
+  }
+
+  .card-body {
+    background-color: #fff;
+  }
+
+  .card-footer {
+    background-color: #eef1f5;
+  }
+}
+
 .card-item {
   color: #333;
+
+  .card-header {
+    background: linear-gradient(135deg, #eef1f5, #fff);
+    cursor: pointer;
+  }
 
   .card-body {
     background-color: #fff;
@@ -131,21 +162,18 @@ a:focus {
 
   &.active .card-header {
     background: #1a9dcf;
-    background: -o-linear-gradient(135deg, #1774b4, #1a9dcf);
-    background: -moz-linear-gradient(135deg, #1774b4, #1a9dcf);
-    background: -webkit-linear-gradient(135deg, #1774b4, #1a9dcf);
+    background: -o-linear-gradient(135deg, #4066b3, #4f90c6);
+    background: -moz-linear-gradient(135deg, #4066b3, #4f90c6);
+    background: -webkit-linear-gradient(135deg, #4066b3, #4f90c6);
     border: none;
     color: #fff;
   }
 
-  &.active .card-body {
+  &.active .card-body,
+  &.active .card-footer {
     border-bottom: 2px solid rgba(#1774b4, .5);
     border-right: 2px solid rgba(#1774b4, .5);
     border-left: 2px solid rgba(#1a9dcf, .5);
-  }
-
-  .card-header {
-    padding: 10px 5px;
   }
 
   .card-body {
@@ -158,22 +186,10 @@ a:focus {
   .percent {
     position: absolute;
     max-width: 50%;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    font-size: 1.6rem;
   }
-}
-
-.card-graph .card-body {
-  padding: 15px
-}
-
-.card-body.card-pie {
-  padding: 0 12%;
-}
-
-.card-header.card-header-tabs {
-  background: none;
-  margin-bottom: 15px;
-  padding: 0 20px;
-  border: none;
 }
 
 /* ---------------------------------------------------
@@ -223,11 +239,12 @@ a.analyse:hover {
 
 .analyse .card-footer {
   padding-bottom: 50px;
+  background-color: #fff;
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 300px;
+  max-width: 300px;
   color: #fff;
   background: #4f90c8;
   transition: all .6s cubic-bezier(.945, .02, .27, .665);
@@ -235,7 +252,7 @@ a.analyse:hover {
 }
 
 #sidebar.active {
-  margin-left: -250px;
+  margin-left: -300px;
   transform: rotateY(100deg);
 }
 
@@ -327,6 +344,12 @@ a[aria-expanded="true"] {
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
+@media (max-width: 1220px) {
+  .card-header h5 {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   #sidebar {
     margin-left: -250px;

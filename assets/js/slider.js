@@ -364,17 +364,17 @@ slider10.noUiSlider.on('update', function (values, handle) {
 slider11.noUiSlider.on('update', function (values, handle) {
     getLegend(this.target.id, values[handle]);
     val11 = ((values[handle]) * 10);
-    let decider_percent = val11;
-    $('#company_percent').text(decider_percent);
-    doughnutStaffUpdate(decider_percent);
+    let staff_percent = val11;
+    $('#staff_percent').text(staff_percent);
+    doughnutStaffUpdate(staff_percent);
 });
 
 slider12.noUiSlider.on('update', function (values, handle) {
     getLegend(this.target.id, values[handle]);
     val12 = ((values[handle]) * 10);
-    let staff_percent = val12;
-    $('#staff_percent').text(staff_percent);
-    doughnutDeciderUpdate(staff_percent);
+    let decider_percent = val12;
+    $('#decider_percent').text(decider_percent);
+    doughnutDeciderUpdate(decider_percent);
 });
 
 
