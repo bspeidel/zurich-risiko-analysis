@@ -2,309 +2,361 @@
     {% block stylesheets %}
         {{ parent() }}
         <link rel="stylesheet" href="{{ asset('build/css/slider.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('build/css/chart.css') }}"/>
     {% endblock %}
 {% block body %}
-    <nav class="navbar navbar-top sticky-top navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
             <div class="sidebar-header text-center">
-                <img class="fixed" src="{{ asset('build/images/zurich-logo.png') }}" alt="">
+                <img src="{{ asset('build/images/zurich-logo.png') }}" alt="">
             </div>
-            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-align-justify"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('selectuser') }}"><i class="fas fa-users"></i> Kunden</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('login') }}"><i class="fas fa-sign-out-alt"></i> Abmelden</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container-fluid mb-5">
-        <div class="row">
-            <div class="col">
-                <h2>Bedarfs- und Risikoanalyse</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h5 class="card-title">Linde Material Handling GmbH</h5>
-                <a href="{{ path('form_1') }}">Unternehmendaten <i class="fas fa-edit"></i></a>
-            </div>
-            <div class="col text-right">
-                <a href="#" class="btn btn-primary"><i class="fas fa-envelope"></i> E-Mail senden</a>
-                <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> PDF erzeugen</a>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="row">
-            <div class="col-4">
-                <div id="card_company" class="card card-item pull-up active">
-                    <div class="card-header">
-                        <h5 class="card-title text-center"><i class="fa fa-shield"></i> Absicherung des Unternehmens</h5>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="{{ path('form_1') }}">Unternehmensdaten</a>
+                </li>
+                <li>
+                    <a href="{{ path('risks') }}">Risiken ermitteln</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="{{ path('form_2') }}">Haftungsrisiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_3') }}">Gebäude-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_4') }}">Inhalt-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_5') }}">Elektronik/Maschinen-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_6') }}">Unterbrechung Ihres Betriebes</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_7') }}">Kosten bei Rechtsangelegenheiten</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_8') }}">Transporte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_9') }}">Kfz-Risiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_10') }}">Spezial-Risiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_11') }}">Mitarbeiter</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_12') }}">Belegschaft / Inhabers / GGf / etc.</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_13') }}">Offene Punkte und weiteres Vorgehen</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a  href="{{ path('analyse') }}" class="btn-primary"><i class="fas fa-sliders-h"></i> Analyse</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar navbar-top sticky-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav navbar-nav navbar-expand ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('selectuser') }}"><i class="fas fa-users"></i> Kunden</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('login') }}"><i class="fas fa-sign-out-alt"></i> Abmelden</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid mb-5">
+                <div class="row">
+                    <div class="col">
+                        <h3>Bedarfs- und Risikoanalyse</h3>
                     </div>
-                    <div class="card-body">
-                        <canvas id="chart_company" class="chart" width="80%" height="80%"></canvas>
-                        <div class="percent"><span id="company_percent">50</span>%</div>
+                    <div class="col text-right">
+                        <a href="#" class="btn btn-primary"><i class="fas fa-envelope"></i> E-Mail senden</a>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> PDF erzeugen</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div id="card_decider" class="card card-item pull-up">
-                    <div class="card-header">
-                        <h5 class="card-title text-center"><i class="fa fa-shield"></i> Absicherung des Entscheiders</h5>
+                <div class="line"></div>
+                <div class="row">
+                    <div class="col-4">
+                        <div id="card_company" class="card card-item pull-up active">
+                            <div class="card-header">
+                                <h5 class="card-title text-center"><i class="fa fa-shield"></i> Absicherung des Unternehmens</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chart_company" class="chart"></canvas>
+                                <div class="percent"><span id="company_percent">50</span>%</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <canvas id="chart_decider" class="chart" width="80%" height="80%"></canvas>
-                        <div class="percent"><span id="decider_percent">50</span>%</div>
+                    <div class="col-4">
+                        <div id="card_decider" class="card card-item pull-up">
+                            <div class="card-header">
+                                <h5 class="card-title text-center"><i class="fa fa-shield"></i> Absicherung des Entscheiders</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chart_decider" class="chart"></canvas>
+                                <div class="percent"><span id="decider_percent">50</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div id="card_staff" class="card card-item pull-up">
+                            <div class="card-header">
+                                <h5 class="card-title text-center"><i class="fa fa-shield"></i> Absicherung der Mitarbeiter</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chart_staff" class="chart"></canvas>
+                                <div class="percent"><span id="staff_percent">50</span>%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div id="card_staff" class="card card-item pull-up">
-                    <div class="card-header">
-                        <h5 class="card-title text-center"><i class="fa fa-shield"></i> Absicherung der Mitarbeiter</h5>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="chart_staff" class="chart" width="80%" height="80%"></canvas>
-                        <div class="percent"><span id="staff_percent">50</span>%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="collapse show" id="collapse_cards_company">
+                <div class="collapse show" id="collapse_cards_company">
 
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Haftungsrisiken
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_2') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2">Im Rahmen der Betriebshaftpflicht ausreichend versichert.</textarea>
-                        <div>
-                            <label  for="">Absicherung</label>
-                            <div class="alert"></div>
-                            <div id="slider2" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Haftungsrisiken
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_2') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1">Im Rahmen der Betriebshaftpflicht ausreichend versichert.</textarea>
+                            <div>
+                                <label  for="">Absicherung</label>
+                                <div class="alert"></div>
+                                <div id="slider2" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Gebäude-Werte
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_3') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2">Gebäude vorhanden aber keine Absicherung.</textarea>
-                        <div>
-                            <label  for="">Absicherung</label>
-                            <div class="alert"></div>
-                            <div id="slider3" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Gebäude-Werte
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_3') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1">Gebäude vorhanden aber keine Absicherung.</textarea>
+                            <div>
+                                <label  for="">Absicherung</label>
+                                <div class="alert"></div>
+                                <div id="slider3" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Inhalt-Werte
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_4') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"> Wert des Wiederaufsbau weicht von Versicherungssumme ab.</textarea>
-                        <div>
-                            <label  for="">Absicherung</label>
-                            <div class="alert"></div>
-                            <div id="slider4" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Inhalt-Werte
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_4') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1"> Wert des Wiederaufbaus weicht von Versicherungssumme ab.</textarea>
+                            <div>
+                                <label  for="">Absicherung</label>
+                                <div class="alert"></div>
+                                <div id="slider4" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Elektronik/Maschinen-Werte
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_5') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <div>
-                            <label  for="">Absicherung</label>
-                            <div class="alert"></div>
-                            <div id="slider5" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Elektronik/Maschinen-Werte
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_5') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                            <div>
+                                <label  for="">Absicherung</label>
+                                <div class="alert"></div>
+                                <div id="slider5" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung bei einer Unterbrechung Ihres Betriebes
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_6') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung bei einer Unterbrechung Ihres Betriebes
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_6') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                            <label  for="">Absicherung</label>
+                            <div class="alert"></div>
+                            <div id="slider6" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label  for="">Absicherung</label>
-                        <div class="alert"></div>
-                        <div id="slider6" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Kosten bei Rechtsangelegenheiten
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_7') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                            <label  for="">Absicherung</label>
+                            <div class="alert"></div>
+                            <div id="slider7" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Kosten bei Rechtsangelegenheiten
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_7') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Transporte
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_8') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                            <label  for="">Absicherung</label>
+                            <div class="alert"></div>
+                            <div id="slider8" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label  for="">Absicherung</label>
-                        <div class="alert"></div>
-                        <div id="slider7" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Kfz-Risiken
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_9') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                            <label  for="">Absicherung</label>
+                            <div class="alert"></div>
+                            <div id="slider9" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Transporte
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_8') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Absicherung Ihrer Spezial-Risiken
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_10') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            <label for="note">Notizen</label>
+                            <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                            <label  for="">Absicherung</label>
+                            <div class="alert"></div>
+                            <div id="slider10" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label  for="">Absicherung</label>
-                        <div class="alert"></div>
-                        <div id="slider8" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                    <div class="card card-item active mt-3">
+                        <div class="card-header">
+                            <h5>Offene Punkte und weiteres Vorgehen
+                                <span class="float-sm-right">
+                                    <a href="{{ path('form_13') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Kfz-Risiken
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_9') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label  for="">Absicherung</label>
-                        <div class="alert"></div>
-                        <div id="slider9" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
-                    </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Spezial-Risiken
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_10') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label  for="">Absicherung</label>
-                        <div class="alert"></div>
-                        <div id="slider10" class="slider-company noUi-av noUi-ltr noUi-horizontal mt-2"></div>
-                    </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Offene Punkte und weiteres Vorgehen
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_13') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
-                    </div>
-                </div>
 
-        </div>
-        <div class="collapse" id="collapse_cards_decider">
-            <div class="card-columns analyse">
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Vorsorge und Absicherung Belegschaft / Inhabers / GGf / etc.
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_12') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label  for="">Absicherung</label>
-                        <div class="alert"></div>
-                        <div id="slider12" class="slider-decider noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                </div>
+                <div class="collapse" id="collapse_cards_decider">
+                    <div class="card-columns analyse">
+                        <div class="card card-item active mt-3">
+                            <div class="card-header">
+                                <h5>Vorsorge und Absicherung Belegschaft / Inhabers / GGf / etc.
+                                    <span class="float-sm-right">
+                                    <a href="{{ path('form_12') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                                </h5>
+                            </div>
+                            <div class="card-footer">
+                                <label for="note">Notizen</label>
+                                <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                                <label  for="">Absicherung</label>
+                                <div class="alert"></div>
+                                <div id="slider12" class="slider-decider noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            </div>
+                        </div>
+                        <div class="card card-item active mt-3">
+                            <div class="card-header">
+                                <h5>Offene Punkte und weiteres Vorgehen
+                                    <span class="float-sm-right">
+                                    <a href="{{ path('form_13') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Offene Punkte und weiteres Vorgehen
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_13') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="collapse" id="collapse_cards_staff">
-            <div class="card-columns analyse">
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Absicherung Ihrer Mitarbeiter
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_11') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-footer">
-                        <label for="note">Notizen</label>
-                        <textarea class="form-control mb-2" name="note" id="note" rows="2"></textarea>
-                        <label  for="">Absicherung</label>
-                        <div class="alert"></div>
-                        <div id="slider11" class="slider-staff noUi-av noUi-ltr noUi-horizontal mt-2"></div>
-                    </div>
-                </div>
-                <div class="card card-item active mt-3">
-                    <div class="card-header">
-                        <h5>Offene Punkte und weiteres Vorgehen
-                            <span class="float-sm-right">
-                                <a href="{{ path('form_13') }}"><i class="fas fa-edit"></i></a>
-                            </span>
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
+                <div class="collapse" id="collapse_cards_staff">
+                    <div class="card-columns analyse">
+                        <div class="card card-item active mt-3">
+                            <div class="card-header">
+                                <h5>Absicherung Ihrer Mitarbeiter
+                                    <span class="float-sm-right">
+                                    <a href="{{ path('form_11') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                                </h5>
+                            </div>
+                            <div class="card-footer">
+                                <label for="note">Notizen</label>
+                                <textarea class="form-control mb-2" name="note" id="note" rows="1"></textarea>
+                                <label  for="">Absicherung</label>
+                                <div class="alert"></div>
+                                <div id="slider11" class="slider-staff noUi-av noUi-ltr noUi-horizontal mt-2"></div>
+                            </div>
+                        </div>
+                        <div class="card card-item active mt-3">
+                            <div class="card-header">
+                                <h5>Offene Punkte und weiteres Vorgehen
+                                    <span class="float-sm-right">
+                                    <a href="{{ path('form_13') }}"><i class="fas fa-edit"></i></a>
+                                </span>
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <textarea class="form-control mb-2" name="note" id="note" rows="3"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -313,4 +365,30 @@
     <nav class="navbar navbar-bottom fixed-bottom navbar-light justify-content-end">
         <a href="#" class="btn btn-success"><i class="fas fa-check"></i> Speichern</a>
     </nav>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    {{ encore_entry_script_tags('app') }}
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+            $('.searchbox-input').on('keyup',function () {
+                console.log(filter);
+                //$('.card').show();
+                var filter = $(this).val(); // get the value of the input, which we filter on
+                console.log(filter);
+                $('.container-fluid').find(".card:not(:contains(" + filter + "))").addClass('d-none');
+                if (!this.value) {
+                    $('.container-fluid').find(".card").removeClass('d-none');
+                }
+            });
+        });
+    </script>
 {% endblock %}

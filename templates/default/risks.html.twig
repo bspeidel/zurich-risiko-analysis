@@ -15,12 +15,47 @@
                     <a href="{{ path('risks') }}">Risiken ermitteln</a>
                 </li>
             </ul>
-            <ul class="list-unstyled CTAs">
-                <li>
-                    <a  href="{{ path('form_2') }}" class="btn-primary mt-3"><i class="fas fa-sliders-h"></i> Jahresgespräch</a>
+            <ul class="list-unstyled components">
+                <li id="item_customCheck2">
+                    <a href="{{ path('form_2') }}">Haftungsrisiken</a>
+                </li>
+                <li id="item_customCheck3">
+                    <a href="{{ path('form_3') }}">Gebäude-Werte</a>
+                </li>
+                <li id="item_customCheck4">
+                    <a href="{{ path('form_4') }}">Inhalt-Werte</a>
+                </li>
+                <li id="item_customCheck5">
+                    <a href="{{ path('form_5') }}">Elektronik/Maschinen-Werte</a>
+                </li>
+                <li id="item_customCheck6">
+                    <a href="{{ path('form_6') }}">Unterbrechung Ihres Betriebes</a>
+                </li>
+                <li id="item_customCheck7">
+                    <a href="{{ path('form_7') }}">Kosten bei Rechtsangelegenheiten</a>
+                </li>
+                <li id="item_customCheck8">
+                    <a href="{{ path('form_8') }}">Transporte</a>
+                </li>
+                <li id="item_customCheck9">
+                    <a href="{{ path('form_9') }}">Kfz-Risiken</a>
+                </li>
+                <li id="item_customCheck10">
+                    <a href="{{ path('form_10') }}">Spezial-Risiken</a>
+                </li>
+                <li id="item_customCheck11">
+                    <a href="{{ path('form_11') }}">Mitarbeiter</a>
+                </li>
+                <li id="item_customCheck12">
+                    <a href="{{ path('form_12') }}">Belegschaft / Inhabers / GGf / etc.</a>
                 </li>
                 <li>
-                    <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    <a href="{{ path('form_13') }}">Offene Punkte und weiteres Vorgehen</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a  href="{{ path('analyse') }}" class="resume"><i class="fas fa-sliders-h"></i> Analyse</a>
                 </li>
             </ul>
         </nav>
@@ -50,68 +85,123 @@
                     </div>
                 </div>
                 <div class="line"></div>
-                <form class="form-row">
-                    <div class="col">
-                        <h3>Risiken des Unternehmens</h3>
-                        <h4>Haftungsrisiken</h4>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
-                            <label class="custom-control-label" for="customCheck2">Haftungsrisiken</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck7" checked>
-                            <label class="custom-control-label" for="customCheck7">Rechtsschutz</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck10" checked>
-                            <label class="custom-control-label" for="customCheck10">Spezial-Risiken</label>
-                        </div>
-                        <h4>Sachsubstanz</h4>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
-                            <label class="custom-control-label" for="customCheck3">Gebäude</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
-                            <label class="custom-control-label" for="customCheck4">Inhalt</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck5" checked>
-                            <label class="custom-control-label" for="customCheck5">Elektronik</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck8" checked>
-                            <label class="custom-control-label" for="customCheck8">Werksverkehr</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck9" checked>
-                            <label class="custom-control-label" for="customCheck9">Kfz-Risiken</label>
-                        </div>
-                        <h4>Ertragsausfall</h4>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck6" checked>
-                            <label class="custom-control-label" for="customCheck6">Betriebsunterbrechung</label>
+                <div class="row">
+                    <div class="col-4">
+                        <div id="card_company" class="card card-item pull-up">
+                            <div class="card-header">
+                                <h5 class="card-title text-center"><i class="fa fa-shield"></i> Risiken des Unternehmens</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Haftungsrisiken</li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck2" checked>
+                                        <label class="custom-control-label w-100" for="customCheck2">Haftungsrisiken</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck7" checked>
+                                        <label class="custom-control-label w-100" for="customCheck7">Kosten bei Rechtsangelegenheiten</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck10" checked>
+                                        <label class="custom-control-label w-100" for="customCheck10">Spezial-Risiken</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">Sachsubstanz</li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck3" checked>
+                                        <label class="custom-control-label w-100" for="customCheck3">Gebäude-Werte</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck4" checked>
+                                        <label class="custom-control-label w-100" for="customCheck4">Inhalt-Werte</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck5" checked>
+                                        <label class="custom-control-label w-100" for="customCheck5">Elektronik/Maschinen-Werte</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck8" checked>
+                                        <label class="custom-control-label w-100" for="customCheck8">Transporte</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck9" checked>
+                                        <label class="custom-control-label w-100" for="customCheck9">Kfz-Risiken</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">Ertragsausfall</li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck6" checked>
+                                        <label class="custom-control-label w-100" for="customCheck6">Unterbrechung Ihres Betriebes</label>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <h3>Risiken des Entscheiders</h3>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck12" checked>
-                            <label class="custom-control-label" for="customCheck12">Vorsorge Inhaber / GGF</label>
+                    <div class="col-4">
+                        <div id="card_decider" class="card card-item pull-up">
+                            <div class="card-header">
+                                <h5 class="card-title text-center"><i class="fa fa-shield"></i> Risiken des Entscheiders</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck12" checked>
+                                        <label class="custom-control-label w-100" for="customCheck12">Belegschaft / Inhabers / GGf / etc.</label>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <h3>Risiken des Mitarbeiter</h3>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck11" checked>
-                            <label class="custom-control-label" for="customCheck11">Absicherung Mitarbeiter</label>
+                    <div class="col-4">
+                        <div id="card_staff" class="card card-item pull-up">
+                            <div class="card-header">
+                                <h5 class="card-title text-center"><i class="fa fa-shield"></i> Risiken der Mitarbeiter</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input w-100" id="customCheck11" checked>
+                                        <label class="custom-control-label w-100" for="customCheck11">Absicherung Mitarbeiter</label>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
     <nav class="navbar navbar-bottom fixed-bottom navbar-light justify-content-end">
         <a href="#" class="btn btn-success"><i class="fas fa-check"></i> Speichern</a>
     </nav>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function () {
+            $("input[type=checkbox]").on("change", function(){
+                if($(this).is(":not(:checked)")) {
+                    $('#item_' + $(this).attr('id')).css('display', 'none');
+                } else {
+                    $('#item_' + $(this).attr('id')).css('display', 'block');
+                }
+            });
+        });
+    </script>
 {% endblock %}
