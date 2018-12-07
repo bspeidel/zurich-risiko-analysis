@@ -12,18 +12,53 @@
                     <a href="{{ path('form_1') }}">Unternehmensdaten</a>
                 </li>
             </ul>
-            <ul class="list-unstyled CTAs">
+            <ul class="list-unstyled components">
                 <li>
-                    <a  href="{{ path('form_2') }}" class="btn-primary mt-3"><i class="fas fa-sliders-h"></i> Jahresgespräch</a>
+                    <a href="{{ path('form_2') }}">Haftungsrisiken</a>
                 </li>
                 <li>
-                    <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    <a href="{{ path('form_3') }}">Gebäude-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_4') }}">Inhalt-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_5') }}">Elektronik/Maschinen-Werte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_6') }}">Unterbrechung Ihres Betriebes</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_7') }}">Kosten bei Rechtsangelegenheiten</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_8') }}">Transporte</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_9') }}">Kfz-Risiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_10') }}">Spezial-Risiken</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_11') }}">Mitarbeiter</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_12') }}">Belegschaft / Inhabers / GGf / etc.</a>
+                </li>
+                <li>
+                    <a href="{{ path('form_13') }}">Offene Punkte und weiteres Vorgehen</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a  href="{{ path('analyse') }}" class="resume"><i class="fas fa-sliders-h"></i> Analyse</a>
                 </li>
             </ul>
         </nav>
         <!-- Page Content Holder -->
         <div id="content">
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-top sticky-top navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="navbar-btn">
                         <span></span>
@@ -40,7 +75,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="container-fluid">
+            <div class="container-fluid mb-5">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h3>Unternehmensdaten</h3>
@@ -185,12 +220,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 float-sm-right text-right mb-5">
-                            <a href="#" class="btn btn-success">Speichern</a>
-                        </div>
+
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-bottom fixed-bottom navbar-light justify-content-end">
+        <a href="#" class="btn btn-success"><i class="fas fa-check"></i> Speichern</a>
+    </nav>
 {% endblock %}

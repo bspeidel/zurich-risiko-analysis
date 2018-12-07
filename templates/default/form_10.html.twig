@@ -9,6 +9,11 @@
             </div>
             <ul class="list-unstyled components">
                 <li>
+                    <a href="{{ path('form_1') }}">Unternehmensdaten</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled components">
+                <li>
                     <a href="{{ path('form_2') }}">Haftungsrisiken</a>
                 </li>
                 <li>
@@ -47,13 +52,13 @@
             </ul>
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a  href="{{ path('analyse') }}" class="resume mt-3"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    <a  href="{{ path('analyse') }}" class="resume"><i class="fas fa-sliders-h"></i> Analyse</a>
                 </li>
             </ul>
         </nav>
         <!-- Page Content Holder -->
         <div id="content">
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-top sticky-top navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="navbar-btn">
                         <span></span>
@@ -73,7 +78,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="container-fluid">
+            <div class="container-fluid mb-5">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h3>Absicherung Ihrer Spezial-Risiken</h3>
@@ -84,7 +89,7 @@
                 <form>
                     <div class="form-row">
                         <div class="form-group col-xl-6">
-                            <div class="card">
+                            <div class="card h-100">
                                 <div class="card-body">
                                     <label for="company">Wie hoch schätzen Sie das Risiko von Zahlungsausfällen durch Ihre gewerblichen Kunden ein?</label>
                                     <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
@@ -92,7 +97,7 @@
                             </div>
                         </div>
                         <div class="form-group col-xl-6">
-                            <div class="card">
+                            <div class="card h-100">
                                 <div class="card-body aligner">
                                     <div class="row aligner-item">
                                         <label class="col-sm-9 col-form-label" for="user">Werden von Ihren Kunden Bürgschaften eingefordert?</label>
@@ -117,7 +122,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-xl-6">
-                            <div class="card">
+                            <div class="card h-100">
                                 <div class="card-body">
                                     <label for="company">Welche Folgen können Datenklau und Datenmissbrauch bei Ihnen haben (Cyber-Attacken)?</label>
                                     <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
@@ -125,7 +130,7 @@
                             </div>
                         </div>
                         <div class="form-group col-xl-6">
-                            <div class="card">
+                            <div class="card h-100">
                                 <div class="card-body">
                                     <label for="company">Wie sind Sie und Ihre Mitarbeiter gegen die Folgen eines Unfalls abgesichert?</label>
                                     <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
@@ -134,53 +139,18 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="card">
+                        <div class="card h-100">
                             <div class="card-body">
                                 <label for="place">Notizen</label>
                                 <textarea type="text-area" class="form-control" id="place" rows="3" placeholder=""></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 float-sm-right text-right mb-5">
-                            <a href="#" class="btn btn-success">Speichern</a>
-                        </div>
-                    </div>
                 </form>
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-bottom fixed-bottom navbar-light justify-content-end">
+        <a href="#" class="btn btn-success"><i class="fas fa-check"></i> Speichern</a>
+    </nav>
 {% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    <script>
-        var data1 = {
-            labels: ['Sachsubstanz', 'Ertragsausfall', 'Haftungsrisiken'],
-            series: [33, 33, 33],
-        };
-
-        var options = {
-            height: '300px',
-            labelInterpolationFnc: function(value) {
-                return value[0]
-            }
-        };
-
-        var responsiveOptions = [
-            ['screen and (min-width: 640px)', {
-                chartPadding: 30,
-                labelOffset: 10,
-                labelInterpolationFnc: function(value) {
-                    return value;
-                }
-            }],
-            ['screen and (min-width: 1024px)', {
-                labelOffset: 20,
-                chartPadding: 0,
-            }]
-        ];
-
-        new Chartist.Pie('.ct-chart-form-10', data1, options, responsiveOptions);
-    </script>
-{% endblock javascripts %}
