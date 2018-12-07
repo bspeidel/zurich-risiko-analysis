@@ -1,5 +1,6 @@
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/functions";
 @import "variables";
+@import "card";
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/mixins";
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/reboot";
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/type";
@@ -42,6 +43,14 @@ a:focus {
   width: 40%;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: #4066b3;
+}
+
+.modal-header {
+  border-bottom: 2px solid #4066b3;
+}
+
 .navbar-top {
   margin-bottom: 40px;
   padding: 25px 10px;
@@ -53,10 +62,6 @@ a:focus {
   .navbar-nav .nav-link {
     padding-right: 10px;
     padding-left: 10px;
-  }
-
-  .navbar-light .navbar-nav .nav-link {
-    color: #4066b3;
   }
 
   .navbar-btn {
@@ -104,98 +109,6 @@ a:focus {
   font-size: 1.2rem;
 }
 
-.card {
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: 0;
-  margin: 0 3px;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-radius: .25rem;
-  border: 1px solid #eae8e6;
-  word-wrap: break-word;
-  background-color: #f2f0ee;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  -webkit-box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .15);
-  box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .15);
-}
-
-.card-header {
-  padding: 0.5rem 1.25rem;
-}
-
-.card-header h5 {
-  margin-bottom: 0;
-  line-height: 38px;
-
-  .btn {
-    min-width: 170px;
-  }
-}
-
-.card-columns.user {
-  .card-header {
-    background: linear-gradient(135deg, #eef1f5, #fff);
-  }
-
-  .card-body {
-    background-color: #fff;
-  }
-
-  .card-footer {
-    background-color: #eef1f5;
-  }
-}
-
-.card-item {
-  color: #333;
-
-  .card-header {
-    background: linear-gradient(135deg, #eef1f5, #fff);
-    cursor: pointer;
-  }
-
-  .card-body {
-    background-color: #fff;
-  }
-
-  &.active .card-header {
-    background: #1a9dcf;
-    background: -o-linear-gradient(135deg, #4066b3, #4f90c6);
-    background: -moz-linear-gradient(135deg, #4066b3, #4f90c6);
-    background: -webkit-linear-gradient(135deg, #4066b3, #4f90c6);
-    border: none;
-    color: #fff;
-  }
-
-  &.active .card-body,
-  &.active .card-footer {
-    border-bottom: 2px solid rgba(#1774b4, .5);
-    border-right: 2px solid rgba(#1774b4, .5);
-    border-left: 2px solid rgba(#1a9dcf, .5);
-  }
-
-  .card-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-  }
-
-  .percent {
-    position: absolute;
-    max-width: 50%;
-    font-weight: 500;
-    letter-spacing: .05rem;
-    font-size: 1.6rem;
-  }
-}
-
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -239,11 +152,6 @@ a.analyse,
 a.analyse:hover {
   color: #fff !important;
   background: #4066b3 !important;
-}
-
-.analyse .card-footer {
-  padding-bottom: 50px;
-  background-color: #fff;
 }
 
 #sidebar {
@@ -387,41 +295,5 @@ a[aria-expanded="true"] {
 
   #sidebarCollapse.active span:last-of-type {
     transform: rotate(-45deg) translate(1px, -1px);
-  }
-}
-
-.card-columns.user {
-  @include media-breakpoint-only(sm) {
-    column-count: 1 !important;
-  }
-
-  @include media-breakpoint-only(md) {
-    column-count: 2 !important;
-  }
-
-  @include media-breakpoint-only(lg) {
-    column-count: 2 !important;
-  }
-
-  @include media-breakpoint-only(xl) {
-    column-count: 4 !important;
-  }
-}
-
-.card-columns {
-  @include media-breakpoint-only(sm) {
-    column-count: 1 !important;
-  }
-
-  @include media-breakpoint-only(md) {
-    column-count: 1 !important;
-  }
-
-  @include media-breakpoint-only(lg) {
-    column-count: 1 !important;
-  }
-
-  @include media-breakpoint-only(xl) {
-    column-count: 1 !important;
   }
 }

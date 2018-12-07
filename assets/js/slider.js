@@ -1,6 +1,6 @@
 noUiSlider.create(slider2, {
     connect: [true, false],
-    start: 5,
+    start: 10,
     step: 1,
     range: {
         min: 0,
@@ -15,7 +15,7 @@ noUiSlider.create(slider2, {
 
 noUiSlider.create(slider3, {
     connect: [true, false],
-    start: 5,
+    start: 0,
     step: 1,
     range: {
         min: 0,
@@ -30,7 +30,7 @@ noUiSlider.create(slider3, {
 
 noUiSlider.create(slider4, {
     connect: [true, false],
-    start: 5,
+    start: 3,
     step: 1,
     range: {
         min: 0,

@@ -1,0 +1,118 @@
+.card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-width: 0;
+  margin: 0 3px;
+  border: 1px solid #eae8e6;
+  border-radius: .25rem;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  word-wrap: break-word;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  background-color: #f2f0ee;
+  -webkit-box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .15);
+  box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .15);
+}
+
+.card-header {
+  padding: .5rem 1.25rem;
+}
+
+.card-header h5 {
+  margin-bottom: 0;
+  line-height: 38px;
+
+  .btn {
+    min-width: 170px;
+  }
+}
+
+.card.card-item.pull-up:not(.active) {
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    -webkit-box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .3);
+    box-shadow: -5px 5px 15px -1px rgba(54, 54, 56, .3);
+  }
+}
+
+.card-item {
+  color: #333;
+
+  .card-header {
+    background: linear-gradient(135deg, #eef1f5, #fff);
+  }
+
+  .card-body {
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .card-footer {
+    padding-bottom: 50px;
+    background-color: #fff;
+  }
+
+  &.active .card-header {
+    border: none;
+    color: #fff;
+    background: #1a9dcf;
+    background: -o-linear-gradient(135deg, #4066b3, #4f90c6);
+    background: -moz-linear-gradient(135deg, #4066b3, #4f90c6);
+    background: -webkit-linear-gradient(135deg, #4066b3, #4f90c6);
+  }
+
+  &.active .card-body,
+  &.active .card-footer {
+    border-right: 2px solid rgba(#1774b4, .5);
+    border-bottom: 2px solid rgba(#1774b4, .5);
+    border-left: 2px solid rgba(#1a9dcf, .5);
+  }
+
+  .percent {
+    position: absolute;
+    max-width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+  }
+}
+
+.card-columns.user {
+  .card-header {
+    background: linear-gradient(135deg, #eef1f5, #fff);
+  }
+
+  .card-body {
+    background-color: #fff;
+  }
+
+  .card-footer {
+    background-color: #eef1f5;
+  }
+
+  @include media-breakpoint-only(sm) {
+    column-count: 1 !important;
+  }
+
+  @include media-breakpoint-only(md) {
+    column-count: 2 !important;
+  }
+
+  @include media-breakpoint-only(lg) {
+    column-count: 2 !important;
+  }
+
+  @include media-breakpoint-only(xl) {
+    column-count: 4 !important;
+  }
+}

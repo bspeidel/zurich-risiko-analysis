@@ -44,9 +44,6 @@
                 </div>
             </nav>
             <div class="container-fluid">
-                <h5 class="card-title">Linde Material Handling GmbH
-                    <a href="{{ path('form_1') }}"><i class="fas fa-edit"></i></a>
-                </h5>
                 <div class="row">
                     <div class="col-12 text-center">
                         <h3>Risiken ermitteln</h3>
@@ -109,14 +106,12 @@
                             <input type="checkbox" class="custom-control-input" id="customCheck11" checked>
                             <label class="custom-control-label" for="customCheck11">Absicherung Mitarbeiter</label>
                         </div>
-                        <div class="row">
-                            <div class="col-12 float-sm-right text-right mb-5">
-                                <a href="#" class="btn btn-success">Speichern</a>
-                            </div>
-                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-bottom fixed-bottom navbar-light justify-content-end">
+        <a href="#" class="btn btn-success"><i class="fas fa-check"></i> Speichern</a>
+    </nav>
 {% endblock %}
