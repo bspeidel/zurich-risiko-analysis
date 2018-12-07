@@ -11,7 +11,7 @@ Encore
     .addStyleEntry('css/index', './assets/scss/main.scss')
     .addStyleEntry('css/login', './assets/scss/login.scss')
     .addStyleEntry('css/slider', './assets/scss/slider.scss')
-    .addStyleEntry('css/chart', './assets/scss/chart.scss')
+    .addStyleEntry('css/card', './assets/scss/card.scss')
 
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()

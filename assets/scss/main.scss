@@ -1,6 +1,5 @@
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/functions";
 @import "variables";
-@import "card";
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/mixins";
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/reboot";
 @import "../../../zurich-risk-analysis/node_modules/bootstrap/scss/type";
@@ -184,6 +183,7 @@ a.analyse:hover {
 }
 
 #sidebar ul.components {
+  margin-bottom: 5px;
   padding: 5px 0;
   border-bottom: 1px solid #47748b;
 }
