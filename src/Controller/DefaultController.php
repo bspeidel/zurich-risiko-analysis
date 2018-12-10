@@ -32,7 +32,7 @@ class DefaultController extends AbstractController
      */
     public function selectuser()
     {
-        return $this->render('default/selectuser.html.twig', [
+        return $this->render('default/users/selectuser.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -42,7 +42,7 @@ class DefaultController extends AbstractController
      */
     public function form1()
     {
-        return $this->render('default/form_1.html.twig', [
+        return $this->render('default/forms/form_1.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -62,7 +62,7 @@ class DefaultController extends AbstractController
      */
     public function form2()
     {
-        return $this->render('default/form_2.html.twig', [
+        return $this->render('default/forms/form_2.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -72,7 +72,7 @@ class DefaultController extends AbstractController
      */
     public function form3()
     {
-        return $this->render('default/form_3.html.twig', [
+        return $this->render('default/forms/form_3.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -82,7 +82,7 @@ class DefaultController extends AbstractController
      */
     public function form4()
     {
-        return $this->render('default/form_4.html.twig', [
+        return $this->render('default/forms/form_4.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -92,7 +92,7 @@ class DefaultController extends AbstractController
      */
     public function form5()
     {
-        return $this->render('default/form_5.html.twig', [
+        return $this->render('default/forms/form_5.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -102,7 +102,7 @@ class DefaultController extends AbstractController
      */
     public function form6()
     {
-        return $this->render('default/form_6.html.twig', [
+        return $this->render('default/forms/form_6.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -112,7 +112,7 @@ class DefaultController extends AbstractController
      */
     public function form7()
     {
-        return $this->render('default/form_7.html.twig', [
+        return $this->render('default/forms/form_7.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -122,7 +122,7 @@ class DefaultController extends AbstractController
      */
     public function form8()
     {
-        return $this->render('default/form_8.html.twig', [
+        return $this->render('default/forms/form_8.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -132,7 +132,7 @@ class DefaultController extends AbstractController
      */
     public function form9()
     {
-        return $this->render('default/form_9.html.twig', [
+        return $this->render('default/forms/form_9.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -142,7 +142,7 @@ class DefaultController extends AbstractController
      */
     public function form10()
     {
-        return $this->render('default/form_10.html.twig', [
+        return $this->render('default/forms/form_10.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -152,7 +152,7 @@ class DefaultController extends AbstractController
      */
     public function form11()
     {
-        return $this->render('default/form_11.html.twig', [
+        return $this->render('default/forms/form_11.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -162,7 +162,7 @@ class DefaultController extends AbstractController
      */
     public function form12()
     {
-        return $this->render('default/form_12.html.twig', [
+        return $this->render('default/forms/form_12.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -172,7 +172,17 @@ class DefaultController extends AbstractController
      */
     public function form13()
     {
-        return $this->render('default/form_13.html.twig', [
+        return $this->render('default/forms/form_13.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    /**
+     * @Route("/edit_user_1", name="edit_user_1")
+     */
+    public function editUser1()
+    {
+        return $this->render('default/users/edituser1.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }

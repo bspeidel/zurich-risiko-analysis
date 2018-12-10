@@ -43,10 +43,10 @@
                 <li>
                     <a href="{{ path('form_10') }}">Spezial-Risiken</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="{{ path('form_11') }}">Mitarbeiter</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="{{ path('form_12') }}">Belegschaft / Inhabers / GGf / etc.</a>
                 </li>
                 <li>
@@ -82,57 +82,27 @@
                 </div>
             </nav>
             <div class="container-fluid mb-5">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Belegschaft / Inhabers / GGf / etc.</h3>
-                    </div>
+                <div id="title_11" class="row container-title mb-3">
+                    <h3>Absicherung Ihrer Mitarbeiter</h3>
                 </div>
-                <div class="ct-chart-form-12 mt-3"></div>
+                <div class="ct-chart-form-11 mt-3"></div>
                 <div class="line"></div>
                 <form>
                     <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <label for="company">Ist das Unternehmen in der Lage, bei einem plötzlichen Ausfall des Inhabers/GGF's auf Dauer unverändert Einkünfte zu erzielen? Wie sieht eine Vertretungs- bzw. Nachfolgeregelung aus?</label>
+                                    <label for="company">Ist Ihr Internehmen Tarifgebunden oder an einen Tarifvertrag angelehnt, wenn ja, um welchen Tarifvertrag handelt es sich?</label>
                                     <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-xl-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <label for="user">Wie stellen Sie die Aufrechterhaltung des Geschäftsbetriebes sicher?</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-xl-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <label for="place">Wie nutzen Sie als Unternehmer die staatlichen Fördermöglichkeiten für ihre Vorsorge?</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group col-xl-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <label for="place">Wie sind Ihre Familienangehörigen versorgt?</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
                                 <div class="card-body aligner">
                                     <div class="row aligner-item">
-                                        <label class="col-sm-9 col-form-label" for="user">Sind Familienangehörige in Ihrem Unternehmen beschäftig?</label>
-                                        <div class="col-sm-3">
+                                        <label class="col-sm-7 col-form-label" for="user">Ist ein Betriebsrat vorhanden?</label>
+                                        <div class="col-sm-5">
                                             <div class="text-right">
                                                 <div class="text-right">
                                                     <div class="custom-control custom-radio custom-control-inline">
@@ -150,20 +120,40 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <label for="place">Wenn ja, wie nutzen Ihre Angehörigen die staatlichen Fördermöglichkeiten für Ihre Vorsorge?</label>
+                                    <label for="company">Wie ist die betriebliche Alterversorgungen für Ihre Matarbeiter geregelt?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-xl-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <label for="company">Wie werden neue Mitarbeiter über die Möglickeiten der betrieblichen Alterversorgung informiert?</label>
                                     <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <label for="place">Notizen</label>
-                                <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
+                    <div class="form-row">
+                        <div class="form-group col-xl-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <label for="company">Wie wurden Sie über das Betriebsrentenstärkungsgesetz 2018 und den damit verbundenen Möglichkeiten und Pflichten für Arbeitnehmer und Arbeitgeber informiert?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-xl-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <label for="place">Notizen</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="3" placeholder=""></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -31,7 +31,7 @@
                 <li>
                     <a href="{{ path('form_6') }}">Unterbrechung Ihres Betriebes</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="{{ path('form_7') }}">Kosten bei Rechtsangelegenheiten</a>
                 </li>
                 <li>
@@ -46,7 +46,7 @@
                 <li>
                     <a href="{{ path('form_11') }}">Mitarbeiter</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="{{ path('form_12') }}">Belegschaft / Inhabers / GGf / etc.</a>
                 </li>
                 <li>
@@ -82,55 +82,52 @@
                 </div>
             </nav>
             <div class="container-fluid mb-5">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Absicherung Ihrer Kosten bei Rechtsangelegenheiten</h3>
-                    </div>
+                <div id="title_12" class="row container-title mb-3">
+                    <h3>Belegschaft / Inhabers / GGf / etc.</h3>
                 </div>
-                <div class="ct-chart-form-7 mt-3"></div>
-                <div class="line"></div>
                 <form>
                     <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
-                                <div class="card-body aligner">
-                                    <div class="aligner-item">
-                                        <label for="user">Sind sie aktuell in folgenden Rechtsbereichen abgesichert?</label>
-                                        <div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">Privat</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck2">Firma</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                <label class="custom-control-label" for="customCheck3">Verkehr</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4"> Spezial-Straf-RS</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4"> Haus-/Grundbesitz eigen/gemietet</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4"> Haus- und Grundbesitz vermietet</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <label for="company">Ist das Unternehmen in der Lage, bei einem plötzlichen Ausfall des Inhabers/GGF's auf Dauer unverändert Einkünfte zu erzielen? Wie sieht eine Vertretungs- bzw. Nachfolgeregelung aus?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
+                                <div class="card-body">
+                                    <label for="user">Wie stellen Sie die Aufrechterhaltung des Geschäftsbetriebes sicher?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-xl-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <label for="place">Wie nutzen Sie als Unternehmer die staatlichen Fördermöglichkeiten für ihre Vorsorge?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-xl-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <label for="place">Wie sind Ihre Familienangehörigen versorgt?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-xl-6">
+                            <div class="card h-100">
                                 <div class="card-body aligner">
                                     <div class="row aligner-item">
-                                        <label class="col-sm-9 col-form-label" for="user">Anstellungsvertrags-RS für die Geschäftsführung?</label>
+                                        <label class="col-sm-9 col-form-label" for="user">Sind Familienangehörige in Ihrem Unternehmen beschäftig?</label>
                                         <div class="col-sm-3">
                                             <div class="text-right">
                                                 <div class="text-right">
@@ -149,31 +146,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
-                                <div class="card-body aligner">
-                                    <div class="row aligner-item">
-                                        <label class="col-sm-9 col-form-label" for="user">Versicherungssumme</label>
-                                        <div class="col-sm-3">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text" id="basic-addon2">€</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <label for="place">Wenn ja, wie nutzen Ihre Angehörigen die staatlichen Fördermöglichkeiten für Ihre Vorsorge?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-xl-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <label for="place">Notizen</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
-                                </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <label for="place">Notizen</label>
+                                <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                             </div>
                         </div>
                     </div>

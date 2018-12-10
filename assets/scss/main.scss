@@ -42,6 +42,71 @@ a:focus {
   width: 40%;
 }
 
+.container-title {
+  padding: 100px 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  h3 {
+    padding: 10px;
+    color: #006;
+    background: rgba(255, 255, 255, .7);
+  }
+}
+
+#title_1 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_man_woman_discuss.jpg');
+}
+
+#title_2 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_guyslookingatplans.jpg');
+}
+
+#title_3 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_buildings.jpg');
+}
+
+#title_4 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_menbluewarehouse.jpg');
+}
+
+#title_5 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_largegears.jpg');
+}
+
+#title_6 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_bluehelmets.jpg');
+}
+
+#title_7 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_movingwalkway.jpg');
+}
+
+#title_8 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_cargoship.jpg');
+}
+
+#title_9 {
+  background-image: url('https://www.zurich.de/_/media/dbe/germany/images/geschaeftskunden/fuhrpark/mini-flotten-1250x417.jpg?h=417&la=de-DE&w=1250&hash=D2A83F3ADD077EAEF1DE89A722566ECAE50B7E58');
+}
+
+#title_10 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/kh/campaigns/2018-advisen-cyber-survey-report-banner.jpg?la=en&w=1250&hash=19EDD6BB1E41FCE5CEF4FA40A595FA2DBF035236');
+}
+
+#title_11 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_peopleatconferencetable.jpg');
+}
+
+#title_12 {
+  background-image: url('https://www.zurich.de/_/media/dbe/germany/images/geschaeftskunden/kredit-und-kaution/kreditversicherung-gesamt-1250x417.jpg?h=417&la=de-DE&w=1250&hash=A7E88D7AF54529C4F4D6CD52EBDC301D472BFD67');
+}
+
+#title_13 {
+  background-image: url('https://www.zurichna.com/_/media/dbe/zna/images/components/stageslider/1600x400_crowsnest.jpg');
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: #4066b3;
 }
@@ -51,7 +116,6 @@ a:focus {
 }
 
 .navbar-top {
-  margin-bottom: 40px;
   padding: 25px 10px;
   border: none;
   border-bottom: 5px #4f90c7 solid;
@@ -82,7 +146,7 @@ a:focus {
 }
 
 .form-control {
-  border-color: #f2f0ee;
+  border: 1px solid #dadada;
 }
 
 .form-check-inline {
@@ -108,6 +172,31 @@ a:focus {
   font-size: 1.2rem;
 }
 
+.select2-container--default .select2-selection--single {
+  background-color: #fff;
+  border: 1px solid #dadada !important;
+  border-radius: 4px;
+}
+
+.select2.select2-container.select2-container--default {
+  display: block;
+  width: 100% !important;
+}
+
+.select2-container--default,
+.select2-selection--single,
+.select2-selection__rendered {
+  height: 38px !important;
+  line-height: 38px !important;
+}
+
+.select2-selection__arrow {
+  top: 5px !important;
+}
+
+.select2-search__field {
+  height: 38px;
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */

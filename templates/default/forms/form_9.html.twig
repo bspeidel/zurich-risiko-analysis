@@ -37,10 +37,10 @@
                 <li>
                     <a href="{{ path('form_8') }}">Transporte</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="{{ path('form_9') }}">Kfz-Risiken</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="{{ path('form_10') }}">Spezial-Risiken</a>
                 </li>
                 <li>
@@ -82,69 +82,22 @@
                 </div>
             </nav>
             <div class="container-fluid mb-5">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Absicherung Ihrer Spezial-Risiken</h3>
-                    </div>
+                <div id="title_9" class="row container-title mb-3">
+                    <h3>Absicherung Ihrer Kfz-Risiken</h3>
                 </div>
-                <div class="ct-chart-form-10 mt-3"></div>
-                <div class="line"></div>
                 <form>
-                    <div class="form-row">
-                        <div class="form-group col-xl-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <label for="company">Wie hoch schätzen Sie das Risiko von Zahlungsausfällen durch Ihre gewerblichen Kunden ein?</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group col-xl-6">
-                            <div class="card h-100">
-                                <div class="card-body aligner">
-                                    <div class="row aligner-item">
-                                        <label class="col-sm-9 col-form-label" for="user">Werden von Ihren Kunden Bürgschaften eingefordert?</label>
-                                        <div class="col-sm-3">
-                                            <div class="text-right">
-                                                <div class="text-right">
-                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                                        <label class="custom-control-label" for="customRadioInline1">ja</label>
-                                                    </div>
-                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                                        <label class="custom-control-label" for="customRadioInline2">nein</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-xl-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <label for="company">Welche Folgen können Datenklau und Datenmissbrauch bei Ihnen haben (Cyber-Attacken)?</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group col-xl-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <label for="company">Wie sind Sie und Ihre Mitarbeiter gegen die Folgen eines Unfalls abgesichert?</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
-                                </div>
+                    <div class="form-group">
+                        <div class="card">
+                            <div class="card-body">
+                                <label for="place">Folgende Fahrzeuge sind aktuell bei uns versichert</label>
+                                <textarea type="text-area" class="form-control" id="place" rows="8" placeholder=""></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="card h-100">
+                        <div class="card">
                             <div class="card-body">
-                                <label for="place">Notizen</label>
+                                <label for="place">Nozizen</label>
                                 <textarea type="text-area" class="form-control" id="place" rows="3" placeholder=""></textarea>
                             </div>
                         </div>

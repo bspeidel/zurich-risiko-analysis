@@ -1,0 +1,1450 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<nav class="navbar navbar-top sticky-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="sidebar-header text-center">
+            <img class="fixed" src="{{ asset('build/images/zurich-logo.png') }}" alt="">
+        </div>
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user-edit"></i> Max Mustermann</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('login') }}"><i class="fas fa-sign-out-alt"></i> Abmelden</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    {% include 'default/users/adduser.html.twig' %}
+    {% include 'default/users/edituser1.html.twig' %}
+    {% include 'default/users/edituser2.html.twig' %}
+    {% include 'default/users/edituser3.html.twig' %}
+    {% include 'default/users/edituser4.html.twig' %}
+    {% include 'default/users/edituser5.html.twig' %}
+    {% include 'default/users/edituser6.html.twig' %}
+    {% include 'default/users/edituser7.html.twig' %}
+    {% include 'default/users/edituser8.html.twig' %}
+    {% include 'default/users/edituser9.html.twig' %}
+    {% include 'default/users/edituser10.html.twig' %}
+    {% include 'default/users/edituser11.html.twig' %}
+    {% include 'default/users/edituser12.html.twig' %}
+    <div id="collapse_user_list" class="collapse show">
+        <div class="row">
+            <div class="col">
+                <h2>Alle Kunden</h2>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="search" placeholder="kunden suchen..." name="search" class="form-control searchbox-input mr-sm-2" required="">
+                    <button id="btn_add_user" type="button" class="btn btn-success">
+                        <i class="fas fa-user-plus"></i> Kunde hinzufügen
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="card-columns user">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Heidelberger Druckmaschinen AG
+                        <span class="float-sm-right">
+                        <a id="edit_user_1" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Maschinenerstellung
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Ute Wechsler</p>
+                    <address>
+                        Kurfürsten-Anlage 52-60<br>
+                        69115 Heidelberg<br>
+                        Tel: 6221 92 00<br>
+                        E-Mail: <a href="mailto:#">ute.wechsler@heidelberg.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_1" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_1" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_1">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_1">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Linde Material Handling GmbH
+                        <span class="float-sm-right">
+                        <a id="edit_user_2" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Hersteller von Lagertechnikgeräten
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Phillipp Koehler</p>
+                    <address>
+                        Heinrich Heine Platz 84<br>
+                        99722 Nordhausen<br>
+                        Tel: 03631 76 20 73<br>
+                        E-Mail: <a href="mailto:#">p.koehler@gmx.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_2" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_2" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_2">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_2">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Umicore AG & Co. KG
+                        <span class="float-sm-right">
+                        <a id="edit_user_3" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Materialtechnologie- und Recycling
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Martin Konig</p>
+                    <p class="card-text"></p>
+                    <address>
+                        Budapester Strasse 4<br>
+                        24516 Neumünster<br>
+                        Tel: 04321 63 97 12<br>
+                        E-Mail: <a href="mailto:#">martinkonig@teleworm.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_3" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_3" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_3">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_3">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">TLG Immobilien
+                        <span class="float-sm-right">
+                        <a id="edit_user_4" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Gewerbe­immobilien
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Michael Zahn</p>
+                    <p class="card-text"></p>
+                    <address>
+                        Flughafenstrasse 8<br>
+                        95671 Bärnau<br>
+                        Tel: 09635 78 10 80<br>
+                        E-Mail: <a href="mailto:#">m.zahn@tlg.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_4" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_4" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_4">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_4">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Carl Zeiss AG
+                        <span class="float-sm-right">
+                        <a id="edit_user_5" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Feinmechanisch-optischen Industrie
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Katrin Wurfel</p>
+                    <address>
+                        Leopoldstraße 68<br>
+                        12489 Berlin Adlershof<br>
+                        Tel: 030 14 64 62<br>
+                        E-Mail: <a href="mailto:#">k.wurfel@zeiss.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_5" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_5" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_5">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_5">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">ThyssenKrupp Rasselstein GmbH
+                        <span class="float-sm-right">
+                        <a id="edit_user_6" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Weißblechhersteller
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Lucas Maier</p>
+                    <address>
+                        Rhinstrasse 86<br>
+                        80935 München<br>
+                        Tel: 089 64 73 92<br>
+                        E-Mail: <a href="mailto:#">l.maier@thyssenkrupp.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_6" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_6" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_6">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_6">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Alfred Kärcher GmbH & Co. KG
+                        <span class="float-sm-right">
+                        <a id="edit_user_7" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Herstellung von Besen und Bürsten
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Julia Strauss</p>
+                    <address>
+                        Brandenburgische Straße 91<br>
+                        10179 Berlin Mitte<br>
+                        Tel: 030 71 14 54<br>
+                        E-Mail: <a href="mailto:#">juliastrauss@rhyta.com</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_7" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_7" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_7">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_7">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Zeppelin GmbH
+                        <span class="float-sm-right">
+                        <a id="edit_user_8" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Handel, Engineering und Dienstleistung
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Christian Reinhard</p>
+                    <address>
+                        Prenzlauer Allee 25<br>
+                        04307 Leipzig<br>
+                        Tel: 0341 64 56 91<br>
+                        E-Mail: <a href="mailto:#">c.reinhard@zeppelin.com</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_8" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_8" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_8">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_8">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Bosch Thermotechnik GmbH
+                        <span class="float-sm-right">
+                        <a id="edit_user_9" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Heizungstechnik
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Katrin Maier</p>
+                    <address>
+                        Landsberger Allee 18<br>
+                        80045 München<br>
+                        Tel: 089 19 49 94<br>
+                        E-Mail: <a href="mailto:#">k.maier@armyspy.com</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_9" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_9" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_9">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_9">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Wieland-Werke AG
+                        <span class="float-sm-right">
+                        <a id="edit_user_10" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Herstellung von Werkzeugmaschinen
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Anne Friedman</p>
+                    <address>
+                        Brandenburgische Straße 26<br>
+                        12307 Berlin Marienfelde<br>
+                        Tel: 030 89 52 44<br>
+                        E-Mail: <a href="mailto:#">anne.friedman@wieland.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_10" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_10" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_10">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_10">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Bosch Thermotechnik GmbH
+                        <span class="float-sm-right">
+                        <a id="edit_user_11" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Heizungstechnik
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Ute Maier</p>
+                    <address>
+                        Landsberger Allee 18<br>
+                        80045 München<br>
+                        Tel: 089 19 49 94<br>
+                        E-Mail: <a href="mailto:#">ute.maier@bosch.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_11" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_11" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_11">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_11">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h5 class="card-title">Bosch Thermotechnik GmbH
+                        <span class="float-sm-right">
+                        <a id="edit_user_12" href="#"><i class="fas fa-edit"></i></a>
+                    </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <strong>Betriebsart:</strong> Heizungstechnik
+                    <p class="card-text"><strong>Ansprechpartner:</strong> Leonie Farber</p>
+                    <address>
+                        Unter den Linden 7<br>
+                        39008 Magdeburg<br>
+                        Tel: 0391 79 53 02<br>
+                        E-Mail: <a href="mailto:#">leonie.farber@bosch.de</a>
+                    </address>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="#collapse_speach_12" class="btn btn-primary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="far fa-calendar-check"></i> Jahresgespräch</a>
+                        <a href="#collapse_analysis_12" class="btn btn-secondary w-100" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="14"><i class="fas fa-sliders-h"></i> Analyse</a>
+                    </div>
+                    <div class="collapse" id="collapse_analysis_12">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('analyse') }}" type="button" class="list-group-item"><i class="fas fa-sliders-h"></i> Analyse<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('analyse') }}"><i class="fas fa-plus-square"></i> Analyse hinzufügen</a>
+                    </div>
+                    <div class="collapse" id="collapse_speach_12">
+                        <div class="list-group mt-4">
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">01.03.2018</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">12.04.2017</span></a>
+                            <a href="{{ path('form_1') }}" type="button" class="list-group-item"><i class="far fa-calendar-check"></i> Jahresgespräch<span class="float-sm-right">24.02.2016</span></a>
+                        </div>
+                        <a class="btn btn-success btn-block mt-3" href="{{ path('form_1') }}"><i class="far fa-calendar-plus"></i> Jahresgespräch hinzufügen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function() {
+
+            $('#btn_add_user').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_add_user').collapse('show')
+            });
+
+            $('#edit_user_1').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_1').collapse('show')
+            });
+
+            $('#edit_user_2').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_2').collapse('show')
+            });
+
+            $('#edit_user_3').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_3').collapse('show')
+            });
+
+            $('#edit_user_4').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_4').collapse('show')
+            });
+
+            $('#edit_user_5').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_5').collapse('show')
+            });
+
+            $('#edit_user_6').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_6').collapse('show')
+            });
+
+            $('#edit_user_7').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_7').collapse('show')
+            });
+
+            $('#edit_user_8').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_8').collapse('show')
+            });
+
+            $('#edit_user_9').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_9').collapse('show')
+            });
+
+            $('#edit_user_10').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_10').collapse('show')
+            });
+
+            $('#edit_user_11').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_11').collapse('show')
+            });
+
+            $('#edit_user_12').click(function() {
+                $('#collapse_user_list').collapse('hide');
+                $('#collapse_edit_user_12').collapse('show')
+            });
+
+            $('.btn-save-user').click(function() {
+                $('#collapse_user_list').collapse('show');
+                $('#collapse_add_user').collapse('hide');
+                $('#collapse_edit_user_1').collapse('hide');
+                $('#collapse_edit_user_2').collapse('hide');
+                $('#collapse_edit_user_3').collapse('hide');
+                $('#collapse_edit_user_4').collapse('hide');
+                $('#collapse_edit_user_5').collapse('hide');
+                $('#collapse_edit_user_6').collapse('hide');
+                $('#collapse_edit_user_7').collapse('hide');
+                $('#collapse_edit_user_8').collapse('hide');
+                $('#collapse_edit_user_9').collapse('hide');
+                $('#collapse_edit_user_10').collapse('hide');
+                $('#collapse_edit_user_11').collapse('hide');
+                $('#collapse_edit_user_12').collapse('hide');
+            });
+
+            var sampleArray = [
+                {
+                    id:0,
+                    text:'Abschleppdienst (ohne Lager)'
+                },
+                {
+                    id:1,
+                    text:'Akustiker'
+                },
+                {
+                    id:2,
+                    text:'Alcantarahandel (Bekleidung)'
+                },
+                {
+                    id:3,
+                    text:'Alcantarawarenhandel (nicht Bekleidung)'
+                },
+                {
+                    id:4,
+                    text:'Alcantarawarenherstellung'
+                },
+                {
+                    id:5,
+                    text:'Alkoholherstellung'
+                },
+                {
+                    id:6,
+                    text:'Altmetallrecycling'
+                },
+                {
+                    id:7,
+                    text:'Altpapierrecycling'
+                },
+                {
+                    id:8,
+                    text:'Ambulanter Pflegedienst'
+                },
+                {
+                    id:9,
+                    text:'Anlegestelle'
+                },
+                {
+                    id:10,
+                    text:'Annahmestelle'
+                },
+                {
+                    id:11,
+                    text:'Antiquitätenhandel'
+                },
+                {
+                    id:12,
+                    text:'Apotheke'
+                },
+                {
+                    id:13,
+                    text:'Architekt'
+                },
+                {
+                    id:14,
+                    text:'Asphaltverarbeitung'
+                },
+                {
+                    id:15,
+                    text:'Asylantenheim'
+                },
+                {
+                    id:16,
+                    text:'Ausstellung'
+                },
+                {
+                    id:17,
+                    text:'Automatenwäscherei'
+                },
+                {
+                    id:18,
+                    text:'Backwarenhandel'
+                },
+                {
+                    id:19,
+                    text:'Backwarenherstellung'
+                },
+                {
+                    id:20,
+                    text:'Bankverwahrung von Kundensachen'
+                },
+                {
+                    id:20,
+                    text:'Bar'
+                },
+                {
+                    id:22,
+                    text:'Batterieherstellung'
+                },
+                {
+                    id:23,
+                    text:'Bauausbaugewerbe'
+                },
+                {
+                    id:24,
+                    text:'Baubude'
+                },
+                {
+                    id:25,
+                    text:'Baumarkt'
+                },
+                {
+                    id:26,
+                    text:'Baumaschinenhandel'
+                },
+                {
+                    id:27,
+                    text:'Baumaschinenverleih'
+                },
+                {
+                    id:28,
+                    text:'Baumschule'
+                },
+                {
+                    id:29,
+                    text:'Baustoffhandel'
+                },
+                {
+                    id:30,
+                    text:'Bauwohnwagen'
+                },
+                {
+                    id:31,
+                    text:'Bedarfsartikelhandel für das Genussmittelgewerbe'
+                },
+                {
+                    id:32,
+                    text:'Bedarfsartikelhandel für das Nahrungsmittelgewerbe'
+                },
+                {
+                    id:33,
+                    text:'Bekleidungshandel (ohne Pelz-, Leder-, Alcantarawaren)'
+                },
+                {
+                    id:34,
+                    text:'Bergverkehrseinrichtung'
+                },
+                {
+                    id:35,
+                    text:'Bestattungsinstitut'
+                },
+                {
+                    id:36,
+                    text:'Bettfedernreinigung'
+                },
+                {
+                    id:37,
+                    text:'Biogasanlage'
+                },
+                {
+                    id:38,
+                    text:'Bitumenverarbeitung'
+                },
+                {
+                    id:39,
+                    text:'Blumenhandel'
+                },
+                {
+                    id:40,
+                    text:'Bodenbelaghandel'
+                },
+                {
+                    id:41,
+                    text:'Bootshaus'
+                },
+                {
+                    id:42,
+                    text:'Botanischer Garten'
+                },
+                {
+                    id:43,
+                    text:'Brauerei'
+                },
+                {
+                    id:44,
+                    text:'Brennstoffhandel'
+                },
+                {
+                    id:45,
+                    text:'Briefmarkenhandel'
+                },
+                {
+                    id:46,
+                    text:'Brotherstellung'
+                },
+                {
+                    id:47,
+                    text:'Buchbinderei'
+                },
+                {
+                    id:48,
+                    text:'Buchhandel'
+                },
+                {
+                    id:49,
+                    text:'Bächerverleih'
+                },
+                {
+                    id:50,
+                    text:'Cafe'
+                },
+                {
+                    id:51,
+                    text:'Chemiefasernherstellung'
+                },
+                {
+                    id:52,
+                    text:'Chemikalienhandel'
+                },
+                {
+                    id:53,
+                    text:'Chemische Anlage'
+                },
+                {
+                    id:54,
+                    text:'Chemische Reinigung'
+                },
+                {
+                    id:55,
+                    text:'Clubhaus'
+                },
+                {
+                    id:56,
+                    text:'Computerhandel'
+                },
+                {
+                    id:57,
+                    text:'Dachdeckerbetrieb'
+                },
+                {
+                    id:58,
+                    text:'Datennetzbetreiber'
+                },
+                {
+                    id:59,
+                    text:'Dentallabor'
+                },
+                {
+                    id:60,
+                    text:'Diskothek'
+                },
+                {
+                    id:61,
+                    text:'Drogerie'
+                },
+                {
+                    id:62,
+                    text:'Druckerei'
+                },
+                {
+                    id:63,
+                    text:'Ehehygieneartikelhandel'
+                },
+                {
+                    id:64,
+                    text:'Einkaufszentrale für Einzelhändler'
+                },
+                {
+                    id:65,
+                    text:'Einkaufszentrum'
+                },
+                {
+                    id:66,
+                    text:'Einrichtungshandel (Möbel)'
+                },
+                {
+                    id:67,
+                    text:'Eisdiele'
+                },
+                {
+                    id:68,
+                    text:'Eisenbahnbetrieb'
+                },
+                {
+                    id:69,
+                    text:'Elektrische Bauteile - Herstellung'
+                },
+                {
+                    id:70,
+                    text:'Elektrizitätswerk'
+                },
+                {
+                    id:71,
+                    text:'Elektro-Großmaschinen - Herstellung und Endmontage'
+                },
+                {
+                    id:72,
+                    text:'Elektro-Kleinmaschinen - Herstellung und Endmontage'
+                },
+                {
+                    id:73,
+                    text:'Elektroinstallationsbetrieb'
+                },
+                {
+                    id:74,
+                    text:'Elektrowarenhandel'
+                },
+                {
+                    id:75,
+                    text:'Entrostung'
+                },
+                {
+                    id:76,
+                    text:'Entsorgungsbetrieb (keine Verbrennung und keine Stoffverwertung)'
+                },
+                {
+                    id:77,
+                    text:'Erdgasbohranlage'
+                },
+                {
+                    id:78,
+                    text:'Eroscenter'
+                },
+                {
+                    id:79,
+                    text:'Essigherstellung'
+                },
+                {
+                    id:80,
+                    text:'Fahrradhandel'
+                },
+                {
+                    id:81,
+                    text:'Fahrschule'
+                },
+                {
+                    id:82,
+                    text:'Fahrzeughandel'
+                },
+                {
+                    id:83,
+                    text:'Farbenhandel'
+                },
+                {
+                    id:84,
+                    text:'Farbenherstellung'
+                },
+                {
+                    id:85,
+                    text:'Feinkeramische Produkte - Herstellung'
+                },
+                {
+                    id:86,
+                    text:'Fernheizwerk'
+                },
+                {
+                    id:87,
+                    text:'Fernsehanstalt'
+                },
+                {
+                    id:88,
+                    text:'Feuerwehr'
+                },
+                {
+                    id:89,
+                    text:'Filmstudio'
+                },
+                {
+                    id:90,
+                    text:'Filmverleih'
+                },
+                {
+                    id:91,
+                    text:'Filzherstellung'
+                },
+                {
+                    id:92,
+                    text:'Fischbearbeitung'
+                },
+                {
+                    id:93,
+                    text:'Fischereibedarfshandel'
+                },
+                {
+                    id:94,
+                    text:'Fischwarenbearbeitung'
+                },
+                {
+                    id:95,
+                    text:'Fitnesscenter'
+                },
+                {
+                    id:96,
+                    text:'Flachglas - Herstellung und Verarbeitung'
+                },
+                {
+                    id:97,
+                    text:'Fleischbearbeitung'
+                },
+                {
+                    id:98,
+                    text:'Fleischwarenbearbeitung'
+                },
+                {
+                    id:99,
+                    text:'Fleischwarenhandel'
+                },
+                {
+                    id:100,
+                    text:'Flughafenbetrieb'
+                },
+                {
+                    id:101,
+                    text:'Forschungsinstitut (chemisch, physikalisch)'
+                },
+                {
+                    id:102,
+                    text:'Fotoapparate - Herstellung und Endmontage'
+                },
+                {
+                    id:103,
+                    text:'Fotogeschäft'
+                },
+                {
+                    id:104,
+                    text:'Fotolabor'
+                },
+                {
+                    id:105,
+                    text:'Freibad'
+                },
+                {
+                    id:106,
+                    text:'freie Berufe'
+                },
+                {
+                    id:107,
+                    text:'Freiluftstation'
+                },
+                {
+                    id:108,
+                    text:'Freizeitpark (stationÃ¤re Fahrgeschäfte)'
+                },
+                {
+                    id:109,
+                    text:'Friseur'
+                },
+                {
+                    id:110,
+                    text:'Fuhrunternehmen (ohne Lager)'
+                },
+                {
+                    id:111,
+                    text:'Furnierholzherstellung'
+                },
+                {
+                    id:112,
+                    text:'Futtermittelherstellung'
+                },
+                {
+                    id:113,
+                    text:'Garage'
+                },
+                {
+                    id:114,
+                    text:'Garderobenverleih'
+                },
+                {
+                    id:115,
+                    text:'Garnverarbeitung'
+                },
+                {
+                    id:116,
+                    text:'Gartencenter'
+                },
+                {
+                    id:117,
+                    text:'Gaswerk'
+                },
+                {
+                    id:118,
+                    text:'Gebrauchttextilienhandel'
+                },
+                {
+                    id:119,
+                    text:'Gebrauchtwarenhandel (nicht Textil)'
+                },
+                {
+                    id:120,
+                    text:'Gebäudereinigung'
+                },
+                {
+                    id:121,
+                    text:'Geldinstitut'
+                },
+                {
+                    id:122,
+                    text:'Gemüse'
+                },
+                {
+                    id:123,
+                    text:'Getreidemühle'
+                },
+                {
+                    id:124,
+                    text:'Getränkehandel'
+                },
+                {
+                    id:125,
+                    text:'Gipsherstellung'
+                },
+                {
+                    id:126,
+                    text:'Gipswarenherstellung'
+                },
+                {
+                    id:127,
+                    text:'Glaserei'
+                },
+                {
+                    id:128,
+                    text:'Glasfasern - Herstellung und Verarbeitung'
+                },
+                {
+                    id:129,
+                    text:'Glashandel'
+                },
+                {
+                    id:130,
+                    text:'Glasrecycling'
+                },
+                {
+                    id:131,
+                    text:'Graphischer Betrieb'
+                },
+                {
+                    id:132,
+                    text:'Grobkeramische Produkte - Herstellung'
+                },
+                {
+                    id:133,
+                    text:'Gummiwarenhandel (ohne Schaumstoffe)'
+                },
+                {
+                    id:134,
+                    text:'Gummiwarenherstellung'
+                },
+                {
+                    id:135,
+                    text:'Gärtnerei'
+                },
+                {
+                    id:136,
+                    text:'Haarteileherstellung'
+                },
+                {
+                    id:137,
+                    text:'Hafenbetrieb (ohne Lager)'
+                },
+                {
+                    id:138,
+                    text:'Halbstoffherstellung'
+                },
+                {
+                    id:139,
+                    text:'Hallenbad'
+                },
+                {
+                    id:140,
+                    text:'Hammerwerk'
+                },
+                {
+                    id:141,
+                    text:'Handelsvertreter (ohne Auslieferungslager)'
+                },
+                {
+                    id:142,
+                    text:'Haushaltsgeräte - Herstellung und Endmontage'
+                },
+                {
+                    id:143,
+                    text:'Haushaltswarenhandel'
+                },
+                {
+                    id:144,
+                    text:'Hausrat eingelagert'
+                },
+                {
+                    id:145,
+                    text:'Hausrat in Musterwohungen'
+                },
+                {
+                    id:146,
+                    text:'Hausrat in vermieteten Wohnungen'
+                },
+                {
+                    id:147,
+                    text:'Haustextilienhandel (mit Orientteppichen)'
+                },
+                {
+                    id:148,
+                    text:'Haustextilienhandel (ohne Orientteppiche)'
+                },
+                {
+                    id:149,
+                    text:'Heilbad'
+                },
+                {
+                    id:150,
+                    text:'Heilberuf'
+                },
+                {
+                    id:151,
+                    text:'Heimtextilienhandel (mit Orientteppichen)'
+                },
+                {
+                    id:152,
+                    text:'Heimtextilienhandel (ohne Orientteppiche)'
+                },
+                {
+                    id:153,
+                    text:'Heimwerkermarkt'
+                },
+                {
+                    id:154,
+                    text:'Heizungsinstallationsbetrieb'
+                },
+                {
+                    id:155,
+                    text:'Herstellung alkoholfreier Getränke'
+                },
+                {
+                    id:156,
+                    text:'Hochbau'
+                },
+                {
+                    id:157,
+                    text:'Hohlglas - Herstellung und Verarbeitung'
+                },
+                {
+                    id:158,
+                    text:'Holzfaserplattenherstellung'
+                },
+                {
+                    id:159,
+                    text:'Holzhandel (ohne Bearbeitung)'
+                },
+                {
+                    id:160,
+                    text:'Holzmusikinstrumentenbau'
+                },
+                {
+                    id:161,
+                    text:'Holzspanherstellung'
+                },
+                {
+                    id:162,
+                    text:'Holzverarbeitung'
+                },
+                {
+                    id:163,
+                    text:'Hotel'
+                },
+                {
+                    id:164,
+                    text:'Imbiss (freistehend)'
+                },
+                {
+                    id:165,
+                    text:'Imbiss (im Gebäude)'
+                },
+                {
+                    id:166,
+                    text:'Imbisswagen'
+                },
+                {
+                    id:167,
+                    text:'Ingenieur'
+                },
+                {
+                    id:168,
+                    text:'Jugendheim'
+                },
+                {
+                    id:169,
+                    text:'Jugendzentrum'
+                },
+                {
+                    id:170,
+                    text:'Juwelierwarenhandel'
+                },
+                {
+                    id:171,
+                    text:'Juwelierwarenherstellung'
+                },
+                {
+                    id:172,
+                    text:'Kabelherstellung'
+                },
+                {
+                    id:173,
+                    text:'Kaffeeherstellung'
+                },
+                {
+                    id:174,
+                    text:'Kakaoherstellung'
+                },
+                {
+                    id:175,
+                    text:'Kalkherstellung'
+                },
+                {
+                    id:176,
+                    text:'Kantine'
+                },
+                {
+                    id:177,
+                    text:'karitative Einrichtung'
+                },
+                {
+                    id:178,
+                    text:'Kartoffelerzeugnisherstellung'
+                },
+                {
+                    id:179,
+                    text:'Kartonherstellung'
+                },
+                {
+                    id:180,
+                    text:'Kartonverarbeitung'
+                },
+                {
+                    id:181,
+                    text:'Kerzen - Herstellung'
+                },
+                {
+                    id:182,
+                    text:'Kessel- und Maschinenhaus'
+                },
+                {
+                    id:183,
+                    text:'Kesselreinigung'
+                },
+                {
+                    id:184,
+                    text:'Kfz-Pflegebetrieb'
+                },
+                {
+                    id:185,
+                    text:'Kfz-Reparaturwerkstatt\n'
+                },
+                {
+                    id:186,
+                    text:'Kfz-Waschanlage'
+                },
+                {
+                    id:187,
+                    text:'Kindergarten'
+                },
+                {
+                    id:188,
+                    text:'Kino'
+                },
+                {
+                    id:189,
+                    text:'Kinocenter'
+                },
+                {
+                    id:190,
+                    text:'Kiosk (freistehend)'
+                },
+                {
+                    id:191,
+                    text:'Kiosk (im Gebäude)'
+                },
+                {
+                    id:192,
+                    text:'Kirche'
+                },
+                {
+                    id:193,
+                    text:'Klebstoffherstellung'
+                },
+                {
+                    id:194,
+                    text:'Klinik'
+                },
+                {
+                    id:195,
+                    text:'Kohle - Brikettierung und Kokerei'
+                },
+                {
+                    id:196,
+                    text:'Kohle - Gewinnung und Aufbereitung'
+                },
+                {
+                    id:197,
+                    text:'Kompostierungsanlage'
+                },
+                {
+                    id:198,
+                    text:'Konservenherstellung (Obst, Gemüse)'
+                },
+                {
+                    id:199,
+                    text:'Konzerthalle'
+                },
+                {
+                    id:200,
+                    text:'Kopieranstalt'
+                }
+            ];
+
+            $('.js-example-basic-single').select2({ data: sampleArray });
+        });
+    </script>
+{% endblock javascripts %}

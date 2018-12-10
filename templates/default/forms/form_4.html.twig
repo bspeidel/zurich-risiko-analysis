@@ -19,10 +19,10 @@
                 <li>
                     <a href="{{ path('form_2') }}">Haftungsrisiken</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="{{ path('form_3') }}">Gebäude-Werte</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="{{ path('form_4') }}">Inhalt-Werte</a>
                 </li>
                 <li>
@@ -82,21 +82,17 @@
                 </div>
             </nav>
             <div class="container-fluid mb-5">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Absicherung Ihrer Gebäude-Werte</h3>
-                    </div>
+                <div id="title_4" class="row container-title mb-3">
+                    <h3>Absicherung Ihrer Inhalt-Werte</h3>
                 </div>
-                <div class="ct-chart-form-3 mt-3"></div>
-                <div class="line"></div>
                 <form>
                     <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
                                 <div class="card-body aligner">
                                     <div class="aligner-item">
-                                        <label for="user">Wieviel Gebäude haben Sie versichert?</label>
-                                            <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="" value="0">
+                                        <label for="user">Die Anzahl der versichterten Orte / Inhalte? beläuft sich auf</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="" value="1">
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +101,7 @@
                             <div class="card h-100">
                                 <div class="card-body aligner">
                                     <div class="aligner-item">
-                                        <label for="user">Die Anschrift für dieses Gebäude lautet</label>
+                                        <label for="user">Die Anschrift für dieses Ort lautet</label>
                                         <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="" value="Heinrich Heine Platz 84, 99722 Nordhausen">
                                     </div>
                                 </div>
@@ -117,10 +113,10 @@
                             <div class="card h-100">
                                 <div class="card-body aligner">
                                     <div class="row align-items-center">
-                                        <label class="col-sm-9 col-form-label" for="user">Was müssten Sie heute bezahlen, um Ihr Gebäude neuwertig aufzubauen</label>
-                                        <div class="col-sm-3">
+                                        <label class="col-sm-9 col-form-label" for="user">Was müssten Sie heute bezahlen, um Ihren Inhalt neuwertig zu beschaften?</label>
+                                        <div class="col-sm-3 float-sm-right">
                                             <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2" value="650000">
+                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2" value="80000">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text" id="basic-addon2">€</span>
                                                 </div>
@@ -134,10 +130,10 @@
                             <div class="card h-100">
                                 <div class="card-body aligner">
                                     <div class="row aligner-item">
-                                        <label class="col-sm-9 col-form-label" for="user">Ihre aktuelle Versicherungsumme lautet</label>
-                                        <div class="col-sm-3">
+                                        <label class="col-sm-9 col-form-label" for="user">Ihre aktuelle Versicherungsumme für die Imhaltsversicherung lautet</label>
+                                        <div class="col-sm-3 float-sm-right">
                                             <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2" value="0">
+                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2" value="20000">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text" id="basic-addon2">€</span>
                                                 </div>
@@ -156,7 +152,7 @@
                                         <label for="user">Folgende Gefahren sind versichert</label>
                                         <div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
                                                 <label class="custom-control-label" for="customCheck1">Feuer</label>
                                             </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
@@ -168,20 +164,20 @@
                                                 <label class="custom-control-label" for="customCheck3">Lw</label>
                                             </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
                                                 <label class="custom-control-label" for="customCheck4"> St/H</label>
                                             </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4"> Ele</label>
+                                                <input type="checkbox" class="custom-control-input" id="customCheck5" checked>
+                                                <label class="custom-control-label" for="customCheck5"> Ele</label>
                                             </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4"> Erweitere Deckung</label>
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                                <label class="custom-control-label" for="customCheck6"> Erweitere Deckung</label>
                                             </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4"> unbenannte Gefahren</label>
+                                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                <label class="custom-control-label" for="customCheck7"> unbenannte Gefahren</label>
                                             </div>
                                         </div>
                                     </div>
@@ -192,7 +188,7 @@
                             <div class="card h-100">
                                 <div class="card-body">
                                     <label for="place">Notizen</label>
-                                    <textarea type="text-area" class="form-control" id="place" rows="3" placeholder="">Gebäude vorhanden aber keine Absicherung.</textarea>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder="">Wert des Wiederaufbaus weicht von Versicherungssumme ab.</textarea>
                                 </div>
                             </div>
                         </div>

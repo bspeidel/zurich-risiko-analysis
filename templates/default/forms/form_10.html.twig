@@ -34,13 +34,13 @@
                 <li>
                     <a href="{{ path('form_7') }}">Kosten bei Rechtsangelegenheiten</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="{{ path('form_8') }}">Transporte</a>
                 </li>
                 <li>
                     <a href="{{ path('form_9') }}">Kfz-Risiken</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="{{ path('form_10') }}">Spezial-Risiken</a>
                 </li>
                 <li>
@@ -82,45 +82,38 @@
                 </div>
             </nav>
             <div class="container-fluid mb-5">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Absicherung Ihrer Transporte</h3>
-                    </div>
+                <div id="title_10" class="row container-title mb-3">
+                    <h3>Absicherung Ihrer Spezial-Risiken</h3>
                 </div>
-                <div class="ct-chart-form-8 mt-3"></div>
+                <div class="ct-chart-form-10 mt-3"></div>
                 <div class="line"></div>
                 <form>
                     <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
-                                <div class="card-body aligner">
-                                    <div class="row aligner-item">
-                                        <label class="col-sm-9 col-form-label" for="user">Wie hoch ist der Wert an eingenen Gütern und Werzeugen, die Sie max. transportieren?</label>
-                                        <div class="col-sm-3">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text" id="basic-addon2">€</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <label for="company">Wie hoch schätzen Sie das Risiko von Zahlungsausfällen durch Ihre gewerblichen Kunden ein?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
                                 <div class="card-body aligner">
-                                    <div class="aligner-item">
-                                        <label for="user">Wird Ware mit Spedition oder Paketdienst bewegt?</label>
-                                        <div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">mit Spedition</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck2">mit Paketdienst</label>
+                                    <div class="row aligner-item">
+                                        <label class="col-sm-9 col-form-label" for="user">Werden von Ihren Kunden Bürgschaften eingefordert?</label>
+                                        <div class="col-sm-3">
+                                            <div class="text-right">
+                                                <div class="text-right">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline1">ja</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadioInline2">nein</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -131,39 +124,26 @@
                     <div class="form-row">
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
-                                <div class="card-body aligner">
-                                    <div class="aligner-item">
-                                        <p>Sind sie aktuell in folgenden Rechtsbereichen abgesichert?</p>
-                                        <div class="row">
-                                            <div class="col">
-                                                <label for="user">mit Spedition</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text" id="basic-addon2">€</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <label for="user">mit Paketdienst</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text" id="basic-addon2">€</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <label for="company">Welche Folgen können Datenklau und Datenmissbrauch bei Ihnen haben (Cyber-Attacken)?</label>
+                                    <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group col-xl-6">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <label for="place">Notizen</label>
+                                    <label for="company">Wie sind Sie und Ihre Mitarbeiter gegen die Folgen eines Unfalls abgesichert?</label>
                                     <textarea type="text-area" class="form-control" id="place" rows="2" placeholder=""></textarea>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <label for="place">Notizen</label>
+                                <textarea type="text-area" class="form-control" id="place" rows="3" placeholder=""></textarea>
                             </div>
                         </div>
                     </div>
